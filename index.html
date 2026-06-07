@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Chinese Flashcards</title>
 
 <style>
@@ -53,7 +52,7 @@ body {
 
     margin: 20px 0;
 
-    border: 1px solid #555;
+    border: 1px solid #666;
     border-radius: 18px;
 
     padding: 28px;
@@ -73,11 +72,11 @@ body {
 }
 
 .front {
-    background: #4a1f1f; /* softer red */
+    background: #5a1f1f; /* lighter red */
 }
 
 .back {
-    background: #4a451a; /* softer yellow */
+    background: #5a531f; /* lighter yellow */
 }
 
 .small {
@@ -100,12 +99,12 @@ body {
 
 const decks = {};
 
-// registerDeck used by external files
+// register decks from files
 function registerDeck(name, cards) {
     decks[name] = cards;
 }
 
-// load JS file safely
+// safe script loader
 function loadScript(src) {
     return new Promise(resolve => {
 
@@ -124,7 +123,7 @@ function loadScript(src) {
     });
 }
 
-// fetch list of deck files from GitHub
+// load deck list from GitHub API
 async function loadDeckFiles() {
 
     const url = "https://api.github.com/repos/shaphi7/flashcards/contents/decks";
@@ -133,22 +132,19 @@ async function loadDeckFiles() {
 
     const files = await res.json();
 
-    if (!Array.isArray(files)) {
-        console.error("GitHub API error:", files);
-        return [];
-    }
-
     return files
         .filter(f => f.name.endsWith(".js"))
         .map(f => f.download_url);
 }
 
-// load all decks BEFORE UI init
+// load all decks
 async function loadAllDecks() {
 
     const files = await loadDeckFiles();
 
-    await Promise.all(files.map(loadScript));
+    for (const file of files) {
+        await loadScript(file);
+    }
 
     initApp();
 }
@@ -157,7 +153,7 @@ async function loadAllDecks() {
 
 <script>
 
-// ---------------- UI LOGIC ----------------
+// UI logic
 
 const selector = document.getElementById("deckSelector");
 const cardEl = document.getElementById("card");
@@ -178,7 +174,6 @@ function shuffle(arr) {
 function loadDeck(name) {
 
     cards = [...decks[name]];
-
     shuffle(cards);
 
     index = 0;
@@ -240,7 +235,7 @@ function initApp() {
 
     selector.innerHTML = "";
 
-    names.forEach(n => {
+    for (const n of names) {
 
         const opt = document.createElement("option");
 
@@ -248,18 +243,16 @@ function initApp() {
         opt.textContent = n;
 
         selector.appendChild(opt);
-    });
+    }
 
     selector.addEventListener("change", e => {
         loadDeck(e.target.value);
     });
 
-    if (names.length > 0) {
-        loadDeck(names[0]);
-    }
+    loadDeck(names[0]);
 }
 
-// START
+// start
 loadAllDecks();
 
 </script>
