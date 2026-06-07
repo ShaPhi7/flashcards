@@ -3,86 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Chinese Flashcards</title>
 
 <style>
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
-    min-height: 100vh;
-
     background: #000;
     color: white;
-
     font-family: Arial, sans-serif;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
 }
 
 #deckSelector {
-
     width: 90%;
     max-width: 500px;
-
     margin-top: 15px;
 
     padding: 12px;
+    font-size: 18px;
 
     background: #111;
     color: white;
 
     border: 1px solid #444;
     border-radius: 8px;
-
-    font-size: 18px;
 }
 
 #counter {
-
-    margin-top: 15px;
-
+    margin-top: 12px;
     font-size: 18px;
 }
 
 #state {
-
-    margin-top: 5px;
-
+    margin-top: 6px;
     font-size: 14px;
-
-    color: #bbb;
-
-    letter-spacing: 1px;
+    color: #aaa;
 }
 
 #card {
-
     width: 92%;
-    max-width: 700px;
-
+    max-width: 720px;
     min-height: 65vh;
 
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 
-    border: 1px solid #555;
+    border: 1px solid #666;
     border-radius: 18px;
 
-    padding: 30px;
+    padding: 28px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     text-align: center;
-
     white-space: pre-wrap;
     overflow-wrap: break-word;
 
@@ -90,16 +69,14 @@ body {
     line-height: 1.5;
 
     cursor: pointer;
-
-    transition: background-color 0.2s;
 }
 
 .front {
-    background: #6b2222;
+    background: #5a1f1f; /* lighter red */
 }
 
 .back {
-    background: #7a6b20;
+    background: #5a531f; /* lighter yellow */
 }
 
 .small {
@@ -122,42 +99,84 @@ body {
 
 const decks = {};
 
+// register decks from files
 function registerDeck(name, cards) {
     decks[name] = cards;
 }
 
-</script>
+// safe script loader
+function loadScript(src) {
+    return new Promise(resolve => {
 
-<script src="decks/colours.js"></script>
+        const s = document.createElement("script");
+
+        s.src = src;
+
+        s.onload = () => resolve(true);
+
+        s.onerror = () => {
+            console.warn("Failed to load:", src);
+            resolve(false);
+        };
+
+        document.body.appendChild(s);
+    });
+}
+
+// load deck list from GitHub API
+async function loadDeckFiles() {
+
+    const url = "https://api.github.com/repos/shaphi7/flashcards/contents/decks";
+
+    const res = await fetch(url);
+
+    const files = await res.json();
+
+    return files
+        .filter(f => f.name.endsWith(".js"))
+        .map(f => f.download_url);
+}
+
+// load all decks
+async function loadAllDecks() {
+
+    const files = await loadDeckFiles();
+
+    for (const file of files) {
+        await loadScript(file);
+    }
+
+    initApp();
+}
+
+</script>
 
 <script>
 
+// UI logic
+
 const selector = document.getElementById("deckSelector");
-const cardElement = document.getElementById("card");
-const counterElement = document.getElementById("counter");
-const stateElement = document.getElementById("state");
+const cardEl = document.getElementById("card");
+const counterEl = document.getElementById("counter");
+const stateEl = document.getElementById("state");
 
 let cards = [];
-let currentCard = 0;
+let index = 0;
 let showingBack = false;
 
-function shuffle(array) {
-
-    for (let i = array.length - 1; i > 0; i--) {
-
+function shuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-
-        [array[i], array[j]] = [array[j], array[i]];
+        [arr[i], arr[j]] = [arr[j], arr[i]];
     }
 }
 
 function loadDeck(name) {
 
     cards = [...decks[name]];
-
     shuffle(cards);
 
-    currentCard = 0;
+    index = 0;
     showingBack = false;
 
     render();
@@ -167,74 +186,74 @@ function render() {
 
     if (!cards.length) return;
 
-    const card = cards[currentCard];
+    const card = cards[index];
 
-    counterElement.textContent =
-        `Card ${currentCard + 1} of ${cards.length}`;
+    counterEl.textContent = `Card ${index + 1} / ${cards.length}`;
 
-    if (showingBack) {
+    if (!showingBack) {
 
-        stateElement.textContent = "BACK";
+        stateEl.textContent = "FRONT";
+        cardEl.className = "front";
+        cardEl.textContent = card.front;
 
-        cardElement.className = "back";
+    } else {
 
-        cardElement.textContent =
+        stateEl.textContent = "BACK";
+        cardEl.className = "back";
+
+        cardEl.textContent =
             card.front +
             "\n\n━━━━━━━━━━\n\n" +
             card.back;
 
         if ((card.front + card.back).length > 120) {
-            cardElement.classList.add("small");
+            cardEl.classList.add("small");
         }
-
-    } else {
-
-        stateElement.textContent = "FRONT";
-
-        cardElement.className = "front";
-
-        cardElement.textContent = card.front;
     }
 }
 
-cardElement.addEventListener("click", () => {
+cardEl.addEventListener("click", () => {
 
     if (!showingBack) {
-
         showingBack = true;
-
     } else {
-
         showingBack = false;
+        index++;
 
-        currentCard++;
-
-        if (currentCard >= cards.length) {
-
+        if (index >= cards.length) {
             shuffle(cards);
-
-            currentCard = 0;
+            index = 0;
         }
     }
 
     render();
 });
 
-Object.keys(decks).forEach(name => {
+function initApp() {
 
-    const option = document.createElement("option");
+    const names = Object.keys(decks);
 
-    option.value = name;
-    option.textContent = name;
+    selector.innerHTML = "";
 
-    selector.appendChild(option);
-});
+    for (const n of names) {
 
-loadDeck(Object.keys(decks)[0]);
+        const opt = document.createElement("option");
 
-selector.addEventListener("change", e => {
-    loadDeck(e.target.value);
-});
+        opt.value = n;
+        opt.textContent = n;
+
+        selector.appendChild(opt);
+    }
+
+    selector.addEventListener("change", e => {
+        loadDeck(e.target.value);
+    });
+
+    loadDeck(names[0]);
+}
+
+// start
+loadAllDecks();
 
 </script>
 
