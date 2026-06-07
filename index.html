@@ -213,10 +213,10 @@ cardElement.addEventListener("click", (e) => {
 
         if (showingBack) {
             showingBack = false;
-            index = Math.max(0, index - 1);
+            currentCard = Math.max(0, currentCard - 1);
         } else {
             // already on front → just go to previous card
-			index = Math.max(0, index - 1);
+			currentCard = Math.max(0, currentCard - 1);
 			showingBack = true;
         }
 
@@ -230,11 +230,11 @@ cardElement.addEventListener("click", (e) => {
         showingBack = true;
     } else {
         showingBack = false;
-        index++;
+        currentCard++;
 
-        if (index >= cards.length) {
+        if (currentCard >= cards.length) {
             shuffle(cards);
-            index = 0;
+            currentCard = 0;
         }
     }
 
