@@ -1,54 +1,383 @@
 registerDeck("Colours", [
 
-{type:1,front:"红色",back:"Red"},
-{type:2,front:"Red",back:"红色\nhóng sè"},
-{type:3,front:"hong se",back:"Red\n\n红色\n\nhóng sè"},
+{
+type:1,
+front:"红色",
+back:`English:
+Red
 
-{type:1,front:"蓝色",back:"Blue"},
-{type:2,front:"Blue",back:"蓝色\nlán sè"},
-{type:3,front:"lan se",back:"Blue\n\n蓝色\n\nlán sè"},
+Chinese:
+红色
 
-{type:1,front:"黄色",back:"Yellow"},
-{type:2,front:"Yellow",back:"黄色\nhuáng sè"},
-{type:3,front:"huang se",back:"Yellow\n\n黄色\n\nhuáng sè"},
+Pinyin:
+hóng sè`
+},
+{
+type:2,
+front:"Red",
+back:`English:
+Red
 
-{type:1,front:"绿色",back:"Green"},
-{type:2,front:"Green",back:"绿色\nlǜ sè"},
-{type:3,front:"lü se",back:"Green\n\n绿色\n\nlǜ sè"},
+Chinese:
+红色
 
-{type:1,front:"黑色",back:"Black"},
-{type:2,front:"Black",back:"黑色\nhēi sè"},
-{type:3,front:"hei se",back:"Black\n\n黑色\n\nhēi sè"},
+Pinyin:
+hóng sè`
+},
+{
+type:3,
+front:"hong se",
+back:`English:
+Red
 
-{type:1,front:"白色",back:"White"},
-{type:2,front:"White",back:"白色\nbái sè"},
-{type:3,front:"bai se",back:"White\n\n白色\n\nbái sè"},
+Chinese:
+红色
 
-{type:1,front:"橙色",back:"Orange"},
-{type:2,front:"Orange",back:"橙色\nchéng sè"},
-{type:3,front:"cheng se",back:"Orange\n\n橙色\n\nchéng sè"},
+Pinyin:
+hóng sè`
+},
 
-{type:1,front:"紫色",back:"Purple"},
-{type:2,front:"Purple",back:"紫色\nzǐ sè"},
-{type:3,front:"zi se",back:"Purple\n\n紫色\n\nzǐ sè"},
+{
+type:1,
+front:"蓝色",
+back:`English:
+Blue
 
-{type:1,front:"粉红色",back:"Pink"},
-{type:2,front:"Pink",back:"粉红色\nfěn hóng sè"},
-{type:3,front:"fen hong se",back:"Pink\n\n粉红色\n\nfěn hóng sè"},
+Chinese:
+蓝色
 
-{type:1,front:"棕色",back:"Brown"},
-{type:2,front:"Brown",back:"棕色\nzōng sè"},
-{type:3,front:"zong se",back:"Brown\n\n棕色\n\nzōng sè"},
+Pinyin:
+lán sè`
+},
+{
+type:2,
+front:"Blue",
+back:`English:
+Blue
+
+Chinese:
+蓝色
+
+Pinyin:
+lán sè`
+},
+{
+type:3,
+front:"lan se",
+back:`English:
+Blue
+
+Chinese:
+蓝色
+
+Pinyin:
+lán sè`
+},
+
+{
+type:1,
+front:"黄色",
+back:`English:
+Yellow
+
+Chinese:
+黄色
+
+Pinyin:
+huáng sè`
+},
+{
+type:2,
+front:"Yellow",
+back:`English:
+Yellow
+
+Chinese:
+黄色
+
+Pinyin:
+huáng sè`
+},
+{
+type:3,
+front:"huang se",
+back:`English:
+Yellow
+
+Chinese:
+黄色
+
+Pinyin:
+huáng sè`
+},
+
+{
+type:1,
+front:"绿色",
+back:`English:
+Green
+
+Chinese:
+绿色
+
+Pinyin:
+lǜ sè`
+},
+{
+type:2,
+front:"Green",
+back:`English:
+Green
+
+Chinese:
+绿色
+
+Pinyin:
+lǜ sè`
+},
+{
+type:3,
+front:"lv se",
+back:`English:
+Green
+
+Chinese:
+绿色
+
+Pinyin:
+lǜ sè`
+},
+
+{
+type:1,
+front:"黑色",
+back:`English:
+Black
+
+Chinese:
+黑色
+
+Pinyin:
+hēi sè`
+},
+{
+type:2,
+front:"Black",
+back:`English:
+Black
+
+Chinese:
+黑色
+
+Pinyin:
+hēi sè`
+},
+{
+type:3,
+front:"hei se",
+back:`English:
+Black
+
+Chinese:
+黑色
+
+Pinyin:
+hēi sè`
+},
+
+{
+type:1,
+front:"白色",
+back:`English:
+White
+
+Chinese:
+白色
+
+Pinyin:
+bái sè`
+},
+{
+type:2,
+front:"White",
+back:`English:
+White
+
+Chinese:
+白色
+
+Pinyin:
+bái sè`
+},
+{
+type:3,
+front:"bai se",
+back:`English:
+White
+
+Chinese:
+白色
+
+Pinyin:
+bái sè`
+},
+
+{
+type:1,
+front:"橙色",
+back:`English:
+Orange
+
+Chinese:
+橙色
+
+Pinyin:
+chéng sè`
+},
+{
+type:2,
+front:"Orange",
+back:`English:
+Orange
+
+Chinese:
+橙色
+
+Pinyin:
+chéng sè`
+},
+{
+type:3,
+front:"cheng se",
+back:`English:
+Orange
+
+Chinese:
+橙色
+
+Pinyin:
+chéng sè`
+},
+
+{
+type:1,
+front:"紫色",
+back:`English:
+Purple
+
+Chinese:
+紫色
+
+Pinyin:
+zǐ sè`
+},
+{
+type:2,
+front:"Purple",
+back:`English:
+Purple
+
+Chinese:
+紫色
+
+Pinyin:
+zǐ sè`
+},
+{
+type:3,
+front:"zi se",
+back:`English:
+Purple
+
+Chinese:
+紫色
+
+Pinyin:
+zǐ sè`
+},
+
+{
+type:1,
+front:"粉红色",
+back:`English:
+Pink
+
+Chinese:
+粉红色
+
+Pinyin:
+fěn hóng sè`
+},
+{
+type:2,
+front:"Pink",
+back:`English:
+Pink
+
+Chinese:
+粉红色
+
+Pinyin:
+fěn hóng sè`
+},
+{
+type:3,
+front:"fen hong se",
+back:`English:
+Pink
+
+Chinese:
+粉红色
+
+Pinyin:
+fěn hóng sè`
+},
+
+{
+type:1,
+front:"棕色",
+back:`English:
+Brown
+
+Chinese:
+棕色
+
+Pinyin:
+zōng sè`
+},
+{
+type:2,
+front:"Brown",
+back:`English:
+Brown
+
+Chinese:
+棕色
+
+Pinyin:
+zōng sè`
+},
+{
+type:3,
+front:"zong se",
+back:`English:
+Brown
+
+Chinese:
+棕色
+
+Pinyin:
+zōng sè`
+},
 
 {
 type:4,
 front:"我穿红色衣服，因为我是 ____。",
-back:`我穿红色衣服，因为我是 ____。
-
-━━━━━━━━━━
-
-English:
+back:`English:
 I wear red clothes because I am a ____.
+
+Chinese:
+我穿红色衣服，因为我是 ____。
 
 Pinyin:
 wǒ chuān hóng sè yī fu, yīn wèi wǒ shì ____.
@@ -79,12 +408,11 @@ student`
 {
 type:4,
 front:"虽然汽车是蓝色的，但是我更喜欢 ____。",
-back:`虽然汽车是蓝色的，但是我更喜欢 ____。
-
-━━━━━━━━━━
-
-English:
+back:`English:
 Although the car is blue, I prefer ____.
+
+Chinese:
+虽然汽车是蓝色的，但是我更喜欢 ____。
 
 Pinyin:
 suī rán qì chē shì lán sè de, dàn shì wǒ gèng xǐ huān ____.
@@ -115,12 +443,11 @@ running`
 {
 type:4,
 front:"我喜欢绿色，所以我想养一只 ____。",
-back:`我喜欢绿色，所以我想养一只 ____。
-
-━━━━━━━━━━
-
-English:
+back:`English:
 I like green, so I want to keep a ____.
+
+Chinese:
+我喜欢绿色，所以我想养一只 ____。
 
 Pinyin:
 wǒ xǐ huān lǜ sè, suǒ yǐ wǒ xiǎng yǎng yì zhī ____.
@@ -151,12 +478,11 @@ fish`
 {
 type:4,
 front:"如果房间是白色的，我会在里面 ____。",
-back:`如果房间是白色的，我会在里面 ____。
-
-━━━━━━━━━━
-
-English:
+back:`English:
 If the room is white, I will ____ in it.
+
+Chinese:
+如果房间是白色的，我会在里面 ____。
 
 Pinyin:
 rú guǒ fáng jiān shì bái sè de, wǒ huì zài lǐ miàn ____.
@@ -187,12 +513,11 @@ eat`
 {
 type:4,
 front:"我觉得黑色很漂亮，因为我喜欢 ____。",
-back:`我觉得黑色很漂亮，因为我喜欢 ____。
-
-━━━━━━━━━━
-
-English:
+back:`English:
 I think black is beautiful because I like ____.
+
+Chinese:
+我觉得黑色很漂亮，因为我喜欢 ____。
 
 Pinyin:
 wǒ jué de hēi sè hěn piào liang, yīn wèi wǒ xǐ huān ____.
@@ -223,12 +548,11 @@ art`
 {
 type:4,
 front:"黄色的花在 ____ 旁边。",
-back:`黄色的花在 ____ 旁边。
-
-━━━━━━━━━━
-
-English:
+back:`English:
 The yellow flowers are next to the ____.
+
+Chinese:
+黄色的花在 ____ 旁边。
 
 Pinyin:
 huáng sè de huā zài ____ páng biān.
@@ -259,12 +583,11 @@ bank`
 {
 type:4,
 front:"我的朋友喜欢蓝色，而且他会 ____。",
-back:`我的朋友喜欢蓝色，而且他会 ____。
-
-━━━━━━━━━━
-
-English:
+back:`English:
 My friend likes blue and he can ____.
+
+Chinese:
+我的朋友喜欢蓝色，而且他会 ____。
 
 Pinyin:
 wǒ de péng you xǐ huān lán sè, ér qiě tā huì ____.
@@ -295,12 +618,11 @@ draw`
 {
 type:4,
 front:"红色的苹果和 ____ 都在桌子上。",
-back:`红色的苹果和 ____ 都在桌子上。
-
-━━━━━━━━━━
-
-English:
+back:`English:
 The red apples and ____ are both on the table.
+
+Chinese:
+红色的苹果和 ____ 都在桌子上。
 
 Pinyin:
 hóng sè de píng guǒ hé ____ dōu zài zhuō zi shàng.
@@ -331,12 +653,11 @@ watermelon`
 {
 type:4,
 front:"虽然天空是蓝色的，但是今天很 ____。",
-back:`虽然天空是蓝色的，但是今天很 ____。
-
-━━━━━━━━━━
-
-English:
+back:`English:
 Although the sky is blue, today is very ____.
+
+Chinese:
+虽然天空是蓝色的，但是今天很 ____。
 
 Pinyin:
 suī rán tiān kōng shì lán sè de, dàn shì jīn tiān hěn ____.
@@ -367,12 +688,11 @@ happy`
 {
 type:4,
 front:"因为墙是白色的，所以我想挂一幅 ____。",
-back:`因为墙是白色的，所以我想挂一幅 ____。
-
-━━━━━━━━━━
-
-English:
+back:`English:
 Because the wall is white, I want to hang a ____.
+
+Chinese:
+因为墙是白色的，所以我想挂一幅 ____。
 
 Pinyin:
 yīn wèi qiáng shì bái sè de, suǒ yǐ wǒ xiǎng guà yì fú ____.
