@@ -3,65 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Chinese Flashcards</title>
 
 <style>
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+    min-height: 100vh;
+
     background: #000;
     color: white;
+
     font-family: Arial, sans-serif;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
 }
 
 #deckSelector {
+
     width: 90%;
     max-width: 500px;
+
     margin-top: 15px;
 
     padding: 12px;
-    font-size: 18px;
 
     background: #111;
     color: white;
 
     border: 1px solid #444;
     border-radius: 8px;
+
+    font-size: 18px;
 }
 
 #counter {
-    margin-top: 12px;
+
+    margin-top: 15px;
+
     font-size: 18px;
 }
 
 #state {
-    margin-top: 6px;
+
+    margin-top: 5px;
+
     font-size: 14px;
-    color: #aaa;
+
+    color: #bbb;
+
+    letter-spacing: 1px;
 }
 
 #card {
+
     width: 92%;
-    max-width: 720px;
+    max-width: 700px;
+
     min-height: 65vh;
 
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
-    border: 1px solid #666;
+    border: 1px solid #555;
     border-radius: 18px;
 
-    padding: 28px;
+    padding: 30px;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     text-align: center;
+
     white-space: pre-wrap;
     overflow-wrap: break-word;
 
@@ -69,14 +90,16 @@ body {
     line-height: 1.5;
 
     cursor: pointer;
+
+    transition: background-color 0.2s;
 }
 
 .front {
-    background: #5a1f1f; /* lighter red */
+    background: #6b2222;
 }
 
 .back {
-    background: #5a531f; /* lighter yellow */
+    background: #7a6b20;
 }
 
 .small {
@@ -99,84 +122,42 @@ body {
 
 const decks = {};
 
-// register decks from files
 function registerDeck(name, cards) {
     decks[name] = cards;
 }
 
-// safe script loader
-function loadScript(src) {
-    return new Promise(resolve => {
-
-        const s = document.createElement("script");
-
-        s.src = src;
-
-        s.onload = () => resolve(true);
-
-        s.onerror = () => {
-            console.warn("Failed to load:", src);
-            resolve(false);
-        };
-
-        document.body.appendChild(s);
-    });
-}
-
-// load deck list from GitHub API
-async function loadDeckFiles() {
-
-    const url = "https://api.github.com/repos/shaphi7/flashcards/contents/decks";
-
-    const res = await fetch(url);
-
-    const files = await res.json();
-
-    return files
-        .filter(f => f.name.endsWith(".js"))
-        .map(f => f.download_url);
-}
-
-// load all decks
-async function loadAllDecks() {
-
-    const files = await loadDeckFiles();
-
-    for (const file of files) {
-        await loadScript(file);
-    }
-
-    initApp();
-}
-
 </script>
+
+<script src="decks/colours.js"></script>
 
 <script>
 
-// UI logic
-
 const selector = document.getElementById("deckSelector");
-const cardEl = document.getElementById("card");
-const counterEl = document.getElementById("counter");
-const stateEl = document.getElementById("state");
+const cardElement = document.getElementById("card");
+const counterElement = document.getElementById("counter");
+const stateElement = document.getElementById("state");
 
 let cards = [];
-let index = 0;
+let currentCard = 0;
 let showingBack = false;
 
-function shuffle(arr) {
-    for (let i = arr.length - 1; i > 0; i--) {
+function shuffle(array) {
+
+    for (let i = array.length - 1; i > 0; i--) {
+
         const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
+
+        [array[i], array[j]] = [array[j], array[i]];
     }
 }
 
 function loadDeck(name) {
 
     cards = [...decks[name]];
+
     shuffle(cards);
 
-    index = 0;
+    currentCard = 0;
     showingBack = false;
 
     render();
@@ -186,74 +167,74 @@ function render() {
 
     if (!cards.length) return;
 
-    const card = cards[index];
+    const card = cards[currentCard];
 
-    counterEl.textContent = `Card ${index + 1} / ${cards.length}`;
+    counterElement.textContent =
+        `Card ${currentCard + 1} of ${cards.length}`;
 
-    if (!showingBack) {
+    if (showingBack) {
 
-        stateEl.textContent = "FRONT";
-        cardEl.className = "front";
-        cardEl.textContent = card.front;
+        stateElement.textContent = "BACK";
 
-    } else {
+        cardElement.className = "back";
 
-        stateEl.textContent = "BACK";
-        cardEl.className = "back";
-
-        cardEl.textContent =
+        cardElement.textContent =
             card.front +
             "\n\n━━━━━━━━━━\n\n" +
             card.back;
 
         if ((card.front + card.back).length > 120) {
-            cardEl.classList.add("small");
+            cardElement.classList.add("small");
         }
+
+    } else {
+
+        stateElement.textContent = "FRONT";
+
+        cardElement.className = "front";
+
+        cardElement.textContent = card.front;
     }
 }
 
-cardEl.addEventListener("click", () => {
+cardElement.addEventListener("click", () => {
 
     if (!showingBack) {
-        showingBack = true;
-    } else {
-        showingBack = false;
-        index++;
 
-        if (index >= cards.length) {
+        showingBack = true;
+
+    } else {
+
+        showingBack = false;
+
+        currentCard++;
+
+        if (currentCard >= cards.length) {
+
             shuffle(cards);
-            index = 0;
+
+            currentCard = 0;
         }
     }
 
     render();
 });
 
-function initApp() {
+Object.keys(decks).forEach(name => {
 
-    const names = Object.keys(decks);
+    const option = document.createElement("option");
 
-    selector.innerHTML = "";
+    option.value = name;
+    option.textContent = name;
 
-    for (const n of names) {
+    selector.appendChild(option);
+});
 
-        const opt = document.createElement("option");
+loadDeck(Object.keys(decks)[0]);
 
-        opt.value = n;
-        opt.textContent = n;
-
-        selector.appendChild(opt);
-    }
-
-    selector.addEventListener("change", e => {
-        loadDeck(e.target.value);
-    });
-
-    loadDeck(names[0]);
-}
-
-// start
-loadAllDecks();
+selector.addEventListener("change", e => {
+    loadDeck(e.target.value);
+});
 
 </script>
 
