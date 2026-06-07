@@ -203,23 +203,38 @@ function render() {
     }
 }
 
-cardElement.addEventListener("click", () => {
+cardElement.addEventListener("click", (e) => {
+
+    const rect = cardElement.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const isLeftSide = x < rect.width / 2;
+	
+    if (isLeftSide) {
+
+        if (showingBack) {
+            showingBack = false;
+            index = Math.max(0, index - 1);
+        } else {
+            // already on front → just go to previous card
+			index = Math.max(0, index - 1);
+			showingBack = true;
+        }
+
+        render();
+        return;
+    }
+
+    // RIGHT SIDE → forward / flip logic
 
     if (!showingBack) {
-
         showingBack = true;
-
     } else {
-
         showingBack = false;
+        index++;
 
-        currentCard++;
-
-        if (currentCard >= cards.length) {
-
+        if (index >= cards.length) {
             shuffle(cards);
-
-            currentCard = 0;
+            index = 0;
         }
     }
 
