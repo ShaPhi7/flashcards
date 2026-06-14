@@ -1,4 +1,4 @@
-registerDeck("Lesson 1", [
+registerDeck("Lesson 2", [
 
 {
 type:1,
