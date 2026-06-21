@@ -643,8 +643,6 @@ cardElement.addEventListener("click", (e) => {
 
     if (singleTapMode) {
 
-        const leavingCard = cards[currentCard];
-
         if (isLeftSide) {
             currentCard = Math.max(0, currentCard - 1);
         } else {
@@ -655,7 +653,7 @@ cardElement.addEventListener("click", (e) => {
             }
         }
 
-        lastAnswer = getBriefAnswer(leavingCard);
+        lastAnswer = currentCard > 0 ? getBriefAnswer(cards[currentCard - 1]) : "";
         showingBack = false;
 
         render();
