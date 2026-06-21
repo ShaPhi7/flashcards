@@ -106,10 +106,70 @@ body {
     font-size: 1.4rem;
 }
 
+#singleTapToggle {
+
+    position: fixed;
+    top: 12px;
+    right: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    background: #111;
+    color: #bbb;
+
+    border: 1px solid #444;
+    border-radius: 8px;
+
+    padding: 6px 10px;
+
+    font-size: 14px;
+
+    user-select: none;
+
+    z-index: 10;
+}
+
+#singleTapToggle input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+#card.stacked {
+    flex-direction: column;
+}
+
+.prev-answer {
+    width: 100%;
+
+    max-height: 22vh;
+    overflow-y: auto;
+
+    font-size: 1.1rem;
+    color: #aaa;
+}
+
+.prev-divider {
+    margin: 12px 0;
+    color: #777;
+    font-size: 1rem;
+}
+
+.card-main {
+    width: 100%;
+}
+
 </style>
 </head>
 
 <body>
+
+<label id="singleTapToggle">
+    <input type="checkbox" id="singleTapCheckbox">
+    Single tap
+</label>
 
 <select id="deckSelector"></select>
 
@@ -147,10 +207,14 @@ const selector = document.getElementById("deckSelector");
 const cardElement = document.getElementById("card");
 const counterElement = document.getElementById("counter");
 const stateElement = document.getElementById("state");
+const singleTapCheckbox = document.getElementById("singleTapCheckbox");
 
 let cards = [];
 let currentCard = 0;
 let showingBack = false;
+
+let singleTapMode = false;
+let lastAnswer = "";
 
 function shuffle(array) {
 
@@ -162,6 +226,36 @@ function shuffle(array) {
     }
 }
 
+// Pulls a short answer out of a card's back text without needing the deck
+// files themselves to follow any particular format. Vocab cards (type 1-3)
+// already have a short 3-line back, so those are used as-is. Sentence cards
+// (type 4) bury the actual answer inside an "Options:" list alongside several
+// other valid options — for those we just take the first option's three
+// lines (hanzi / pinyin / meaning) rather than the whole sentence + list.
+function getBriefAnswer(card) {
+
+    if (!card || !card.back) return "";
+
+    const text = card.back;
+    const optionsIndex = text.indexOf("Options:");
+
+    if (optionsIndex !== -1) {
+
+        const afterOptions = text.slice(optionsIndex + "Options:".length);
+        const lines = afterOptions.split("\n").map(l => l.trim()).filter(Boolean);
+
+        if (lines.length >= 3) {
+            const firstLine = lines[0].replace(/^\d+\.\s*/, "");
+            return [firstLine, lines[1], lines[2]].join("\n");
+        }
+
+        return lines.slice(0, 3).join("\n");
+    }
+
+    const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
+    return lines.slice(0, 3).join("\n");
+}
+
 function loadDeck(name) {
 
     cards = [...decks[name]];
@@ -170,6 +264,7 @@ function loadDeck(name) {
 
     currentCard = 0;
     showingBack = false;
+    lastAnswer = "";
 
     render();
 }
@@ -182,6 +277,44 @@ function render() {
 
     counterElement.textContent =
         `Card ${currentCard + 1} of ${cards.length}`;
+
+    if (singleTapMode) {
+
+        stateElement.textContent = "TAP TO ADVANCE";
+
+        cardElement.className = "front";
+        cardElement.innerHTML = "";
+
+        if (lastAnswer) {
+
+            cardElement.classList.add("stacked");
+
+            const answerDiv = document.createElement("div");
+            answerDiv.className = "prev-answer";
+            answerDiv.textContent = lastAnswer;
+
+            const divider = document.createElement("div");
+            divider.className = "prev-divider";
+            divider.textContent = "━━━━━━━━━━";
+
+            const frontDiv = document.createElement("div");
+            frontDiv.className = "card-main";
+            frontDiv.textContent = card.front;
+
+            cardElement.appendChild(answerDiv);
+            cardElement.appendChild(divider);
+            cardElement.appendChild(frontDiv);
+
+            if ((lastAnswer.length + card.front.length) > 100) {
+                cardElement.classList.add("small");
+            }
+
+        } else {
+            cardElement.textContent = card.front;
+        }
+
+        return;
+    }
 
     if (showingBack) {
 
@@ -213,7 +346,28 @@ cardElement.addEventListener("click", (e) => {
     const rect = cardElement.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const isLeftSide = x < rect.width / 2;
-	
+
+    if (singleTapMode) {
+
+        const leavingCard = cards[currentCard];
+
+        if (isLeftSide) {
+            currentCard = Math.max(0, currentCard - 1);
+        } else {
+            currentCard++;
+            if (currentCard >= cards.length) {
+                shuffle(cards);
+                currentCard = 0;
+            }
+        }
+
+        lastAnswer = getBriefAnswer(leavingCard);
+        showingBack = false;
+
+        render();
+        return;
+    }
+
     if (isLeftSide) {
 
         if (showingBack) {
@@ -242,6 +396,13 @@ cardElement.addEventListener("click", (e) => {
         }
     }
 
+    render();
+});
+
+singleTapCheckbox.addEventListener("change", (e) => {
+    singleTapMode = e.target.checked;
+    lastAnswer = "";
+    showingBack = false;
     render();
 });
 
