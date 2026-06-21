@@ -3,10 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
 
 <title>Chinese Flashcards</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
+
+/* ============================================================
+   Tokens — "Ink & Seal": a study-card surface modelled on
+   character-practice paper (田字格), with a vermillion "seal"
+   accent for prompts and a brass accent for revealed answers.
+   ============================================================ */
+
+:root {
+    --ink-950: #131110;
+    --ink-900: #1A1613;
+    --ink-800: #221C18;
+    --border:  #3A3025;
+
+    --paper:      #ECE3CD;
+    --paper-dim:  #C9BFA8;
+    --muted:      #948A7C;
+
+    --seal:       #B23B30;
+    --seal-deep:  #7A2620;
+    --seal-edge:  rgba(178, 59, 48, 0.4);
+
+    --brass:      #C99A3C;
+    --brass-deep: #8C6B22;
+    --brass-edge: rgba(201, 154, 60, 0.4);
+
+    --font-display: 'Noto Serif SC', serif;
+    --font-body: 'IBM Plex Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+}
 
 * {
     box-sizing: border-box;
@@ -16,66 +50,256 @@ body {
     margin: 0;
     min-height: 100vh;
 
-    background: #000;
-    color: white;
+    background: radial-gradient(ellipse 120% 70% at 50% -10%, #251E18 0%, var(--ink-950) 55%) fixed;
+    color: var(--paper);
 
-    font-family: Arial, sans-serif;
+    font-family: var(--font-body);
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* faint practice-grid wash across the whole page */
+.bg-texture {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    opacity: 0.05;
+
+    background-image:
+        linear-gradient(var(--paper) 1px, transparent 1px),
+        linear-gradient(90deg, var(--paper) 1px, transparent 1px);
+    background-size: 48px 48px;
+}
+
+/* ---------------- header ---------------- */
+
+.app-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    padding: 14px 20px;
+
+    background: rgba(26, 22, 19, 0.85);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.brand-mark {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: var(--seal);
+}
+
+.brand-name {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+/* ---------------- single-tap toggle ---------------- */
+
+.tap-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tap-toggle-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.switch {
+    position: relative;
+    display: inline-flex;
+    width: 42px;
+    height: 24px;
+}
+
+.switch input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.switch-track {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 999px;
+    background: var(--ink-800);
+    border: 1px solid var(--border);
+
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.switch-knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+    background: var(--paper-dim);
+
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.switch input:checked ~ .switch-track {
+    background: var(--seal-deep);
+    border-color: var(--seal);
+}
+
+.switch input:checked ~ .switch-track .switch-knob {
+    transform: translateX(18px);
+    background: var(--paper);
+}
+
+.switch input:focus-visible ~ .switch-track {
+    outline: 2px solid var(--brass);
+    outline-offset: 2px;
+}
+
+/* ---------------- stage ---------------- */
+
+.stage {
+    width: 100%;
+    max-width: 520px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 28px 20px 36px;
+    position: relative;
+    z-index: 1;
+}
+
+.deck-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.field-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brass);
+}
+
 #deckSelector {
 
-    width: 90%;
-    max-width: 500px;
+    width: 100%;
 
-    margin-top: 15px;
+    padding: 12px 40px 12px 14px;
 
-    padding: 12px;
+    background: var(--ink-800);
+    color: var(--paper);
 
-    background: #111;
-    color: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
 
-    border: 1px solid #444;
-    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 16px;
 
-    font-size: 18px;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'><path d='M5 7l5 5 5-5' stroke='%23C99A3C' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 16px;
+
+    cursor: pointer;
+
+    transition: border-color 0.2s ease;
+}
+
+#deckSelector:hover,
+#deckSelector:focus-visible {
+    border-color: var(--brass);
+    outline: none;
+}
+
+.status-row {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
 }
 
 #counter {
-
-    margin-top: 15px;
-
-    font-size: 18px;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    color: var(--muted);
 }
 
 #state {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brass);
 
-    margin-top: 5px;
+    padding: 4px 10px;
 
-    font-size: 14px;
-
-    color: #bbb;
-
-    letter-spacing: 1px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--ink-800);
 }
+
+/* ---------------- the card itself ---------------- */
 
 #card {
 
-    width: 92%;
-    max-width: 700px;
+    width: 100%;
+    min-height: 60vh;
 
-    min-height: 65vh;
+    margin: 0 0 20px;
 
-    margin-top: 20px;
-    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
 
-    border: 1px solid #555;
-    border-radius: 18px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
 
-    padding: 30px;
+    padding: 40px 30px;
 
     display: flex;
     justify-content: center;
@@ -86,55 +310,71 @@ body {
     white-space: pre-wrap;
     overflow-wrap: break-word;
 
-    font-size: 2rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.2rem, 9vw, 3.2rem);
     line-height: 1.5;
 
+    color: var(--paper);
+
     cursor: pointer;
 
-    transition: background-color 0.2s;
+    box-shadow: 0 20px 60px -22px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.front {
-    background: #6b2222;
+/* signature texture — a 田字格-style practice square: a dashed
+   frame with a faint cross through the centre */
+#card::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+
+    border: 1px dashed rgba(236, 227, 205, 0.14);
+    border-radius: 12px;
+
+    pointer-events: none;
 }
 
-.back {
-    background: #7a6b20;
+#card::after {
+    content: "";
+    position: absolute;
+    inset: 18px;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(rgba(236, 227, 205, 0.1), rgba(236, 227, 205, 0.1)) no-repeat center / 1px 100%,
+        linear-gradient(rgba(236, 227, 205, 0.1), rgba(236, 227, 205, 0.1)) no-repeat center / 100% 1px;
 }
 
-.small {
-    font-size: 1.4rem;
+@media (hover: hover) and (pointer: fine) {
+    #card:hover {
+        box-shadow: 0 26px 76px -20px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
 }
 
-#singleTapToggle {
-
-    position: fixed;
-    top: 12px;
-    right: 12px;
-
-    display: flex;
-    align-items: center;
-    gap: 6px;
-
-    background: #111;
-    color: #bbb;
-
-    border: 1px solid #444;
-    border-radius: 8px;
-
-    padding: 6px 10px;
-
-    font-size: 14px;
-
-    user-select: none;
-
-    z-index: 10;
+#card.front {
+    background: radial-gradient(120% 140% at 30% 0%, var(--seal-deep) 0%, #4A1815 70%, #3A120F 100%);
+    border-color: var(--seal-edge);
 }
 
-#singleTapToggle input {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
+#card.back {
+    background: radial-gradient(120% 140% at 30% 0%, var(--brass-deep) 0%, #4A3712 70%, #38290D 100%);
+    border-color: var(--brass-edge);
+
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.7;
+}
+
+/* equal specificity to #card.front / #card.back, placed after them
+   so it wins ties on the properties that actually overlap */
+#card.small {
+    font-size: 1.05rem;
+    line-height: 1.6;
 }
 
 #card.stacked {
@@ -147,18 +387,47 @@ body {
     max-height: 22vh;
     overflow-y: auto;
 
-    font-size: 1.1rem;
-    color: #aaa;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--paper-dim);
+    opacity: 0.85;
 }
 
 .prev-divider {
-    margin: 12px 0;
-    color: #777;
-    font-size: 1rem;
+    width: 100%;
+    margin: 14px 0;
+
+    text-align: center;
+    letter-spacing: 0.2em;
+    font-size: 0.85rem;
+
+    color: var(--brass);
+    opacity: 0.5;
 }
 
 .card-main {
     width: 100%;
+
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+}
+
+.hint {
+    margin: 2px 0 0;
+
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    text-align: center;
+}
+
+@media (max-width: 420px) {
+    .app-header { padding: 12px 14px; }
+    .brand-name { font-size: 0.68rem; }
+    #card { padding: 30px 20px; min-height: 56vh; }
 }
 
 </style>
@@ -166,17 +435,42 @@ body {
 
 <body>
 
-<label id="singleTapToggle">
-    <input type="checkbox" id="singleTapCheckbox">
-    Single tap
-</label>
+<div class="bg-texture" aria-hidden="true"></div>
 
-<select id="deckSelector"></select>
+<header class="app-header">
 
-<div id="counter"></div>
-<div id="state"></div>
+    <div class="brand">
+        <span class="brand-mark">印</span>
+        <span class="brand-name">Flashcards</span>
+    </div>
 
-<div id="card"></div>
+    <label id="singleTapToggle" class="tap-toggle">
+        <span class="tap-toggle-label">Single tap</span>
+        <span class="switch">
+            <input type="checkbox" id="singleTapCheckbox">
+            <span class="switch-track"><span class="switch-knob"></span></span>
+        </span>
+    </label>
+
+</header>
+
+<main class="stage">
+
+    <div class="deck-row">
+        <label class="field-label" for="deckSelector">Deck</label>
+        <select id="deckSelector"></select>
+    </div>
+
+    <div class="status-row">
+        <span id="counter"></span>
+        <span id="state"></span>
+    </div>
+
+    <div id="card"></div>
+
+    <p class="hint">tap left to go back · tap right to flip / advance</p>
+
+</main>
 
 <script>
 
