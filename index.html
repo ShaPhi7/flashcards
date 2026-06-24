@@ -85,8 +85,6 @@
     #card {
       position: absolute;
       inset: 0;
-      background: linear-gradient(160deg, var(--surface-2) 0%, var(--surface) 100%);
-      border: 1px solid var(--divider);
       border-radius: 20px;
       display: flex;
       justify-content: center;
@@ -94,9 +92,20 @@
       padding: 2rem;
       text-align: center;
       cursor: pointer;
-      box-shadow: var(--shadow);
-      transition: transform 0.12s ease;
+      transition: transform 0.12s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
       overflow: hidden;
+    }
+    /* ── FRONT: cool blue ── */
+    #card.front {
+      background: linear-gradient(160deg, #1a2540 0%, #111827 100%);
+      border: 1px solid #2e4270;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(122,167,255,0.06);
+    }
+    /* ── BACK: warm amber ── */
+    #card.back {
+      background: linear-gradient(160deg, #2a1f0e 0%, #1a140a 100%);
+      border: 1px solid #6b4a1a;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(201,154,60,0.08);
     }
     #card:active { transform: scale(0.985); }
     .card-main {
