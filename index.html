@@ -1,485 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="dark">
-
-<title>Chinese Flashcards</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
-<style>
-
-/* ============================================================
-   Tokens — "Ink & Seal": a study-card surface modelled on
-   character-practice paper (田字格), with a vermillion "seal"
-   accent for prompts and a brass accent for revealed answers.
-   ============================================================ */
-
-:root {
-    --ink-950: #131110;
-    --ink-900: #1A1613;
-    --ink-800: #221C18;
-    --border:  #3A3025;
-
-    --paper:      #ECE3CD;
-    --paper-dim:  #C9BFA8;
-    --muted:      #948A7C;
-
-    --seal:       #B23B30;
-    --seal-deep:  #7A2620;
-    --seal-edge:  rgba(178, 59, 48, 0.4);
-
-    --brass:      #C99A3C;
-    --brass-deep: #8C6B22;
-    --brass-edge: rgba(201, 154, 60, 0.4);
-
-    --font-display: 'Noto Serif SC', serif;
-    --font-body: 'IBM Plex Sans', sans-serif;
-    --font-mono: 'IBM Plex Mono', monospace;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    min-height: 100vh;
-
-    background: radial-gradient(ellipse 120% 70% at 50% -10%, #251E18 0%, var(--ink-950) 55%) fixed;
-    color: var(--paper);
-
-    font-family: var(--font-body);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* faint practice-grid wash across the whole page */
-.bg-texture {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-
-    opacity: 0.05;
-
-    background-image:
-        linear-gradient(var(--paper) 1px, transparent 1px),
-        linear-gradient(90deg, var(--paper) 1px, transparent 1px);
-    background-size: 48px 48px;
-}
-
-/* ---------------- header ---------------- */
-
-.app-header {
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-
-    padding: 14px 20px;
-
-    background: rgba(26, 22, 19, 0.85);
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid var(--border);
-}
-
-.brand {
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-}
-
-.brand-mark {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 1;
-    color: var(--seal);
-}
-
-.brand-name {
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--muted);
-}
-
-/* ---------------- single-tap toggle ---------------- */
-
-.tap-toggle {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    user-select: none;
-}
-
-.tap-toggle-label {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-}
-
-.switch {
-    position: relative;
-    display: inline-flex;
-    width: 42px;
-    height: 24px;
-}
-
-.switch input {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    margin: 0;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.switch-track {
-    position: absolute;
-    inset: 0;
-
-    border-radius: 999px;
-    background: var(--ink-800);
-    border: 1px solid var(--border);
-
-    transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-.switch-knob {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 18px;
-    height: 18px;
-
-    border-radius: 50%;
-    background: var(--paper-dim);
-
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.switch input:checked ~ .switch-track {
-    background: var(--seal-deep);
-    border-color: var(--seal);
-}
-
-.switch input:checked ~ .switch-track .switch-knob {
-    transform: translateX(18px);
-    background: var(--paper);
-}
-
-.switch input:focus-visible ~ .switch-track {
-    outline: 2px solid var(--brass);
-    outline-offset: 2px;
-}
-
-/* ---------------- stage ---------------- */
-
-.stage {
-    width: 100%;
-    max-width: 520px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 28px 20px 36px;
-    position: relative;
-    z-index: 1;
-}
-
-.deck-row {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 20px;
-}
-
-.field-label {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--brass);
-}
-
-#deckSelector {
-
-    width: 100%;
-
-    padding: 12px 40px 12px 14px;
-
-    background: var(--ink-800);
-    color: var(--paper);
-
-    border: 1px solid var(--border);
-    border-radius: 10px;
-
-    font-family: var(--font-body);
-    font-size: 16px;
-
-    appearance: none;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'><path d='M5 7l5 5 5-5' stroke='%23C99A3C' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
-    background-repeat: no-repeat;
-    background-position: right 14px center;
-    background-size: 16px;
-
-    cursor: pointer;
-
-    transition: border-color 0.2s ease;
-}
-
-#deckSelector:hover,
-#deckSelector:focus-visible {
-    border-color: var(--brass);
-    outline: none;
-}
-
-.status-row {
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    margin-bottom: 18px;
-}
-
-#counter {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    letter-spacing: 0.02em;
-    color: var(--muted);
-}
-
-#state {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--brass);
-
-    padding: 4px 10px;
-
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    background: var(--ink-800);
-}
-
-/* ---------------- the card itself ---------------- */
-
-#card {
-
-    width: 100%;
-    min-height: 60vh;
-
-    margin: 0 0 20px;
-
-    position: relative;
-    overflow: hidden;
-
-    border: 1px solid var(--border);
-    border-radius: 20px;
-
-    padding: 40px 30px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
-
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: clamp(2.2rem, 9vw, 3.2rem);
-    line-height: 1.5;
-
-    color: var(--paper);
-
-    cursor: pointer;
-
-    box-shadow: 0 20px 60px -22px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.04);
-
-    transition: background-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* signature texture — a 田字格-style practice square: a dashed
-   frame with a faint cross through the centre */
-#card::before {
-    content: "";
-    position: absolute;
-    inset: 18px;
-
-    border: 1px dashed rgba(236, 227, 205, 0.14);
-    border-radius: 12px;
-
-    pointer-events: none;
-}
-
-#card::after {
-    content: "";
-    position: absolute;
-    inset: 18px;
-
-    pointer-events: none;
-
-    background:
-        linear-gradient(rgba(236, 227, 205, 0.1), rgba(236, 227, 205, 0.1)) no-repeat center / 1px 100%,
-        linear-gradient(rgba(236, 227, 205, 0.1), rgba(236, 227, 205, 0.1)) no-repeat center / 100% 1px;
-}
-
-@media (hover: hover) and (pointer: fine) {
-    #card:hover {
-        box-shadow: 0 26px 76px -20px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chinese Flashcards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1115;
+      --surface: #1a1d24;
+      --surface-2: #242832;
+      --on-surface: #e8eaed;
+      --on-surface-dim: #9aa0a6;
+      --primary: #7aa7ff;
+      --accent: #80cbc4;
+      --divider: #2e333d;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
-}
-
-#card.front {
-    background: radial-gradient(120% 140% at 30% 0%, var(--seal-deep) 0%, #4A1815 70%, #3A120F 100%);
-    border-color: var(--seal-edge);
-}
-
-#card.back {
-    background: radial-gradient(120% 140% at 30% 0%, var(--brass-deep) 0%, #4A3712 70%, #38290D 100%);
-    border-color: var(--brass-edge);
-
-    font-family: var(--font-body);
-    font-weight: 400;
-    font-size: 1.3rem;
-    line-height: 1.7;
-}
-
-/* equal specificity to #card.front / #card.back, placed after them
-   so it wins ties on the properties that actually overlap */
-#card.small {
-    font-size: 1.05rem;
-    line-height: 1.6;
-}
-
-#card.stacked {
-    flex-direction: column;
-}
-
-.prev-answer {
-    width: 100%;
-
-    max-height: 22vh;
-    overflow-y: auto;
-
-    font-family: var(--font-body);
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--paper-dim);
-    opacity: 0.85;
-}
-
-.prev-divider {
-    width: 100%;
-    margin: 14px 0;
-
-    text-align: center;
-    letter-spacing: 0.2em;
-    font-size: 0.85rem;
-
-    color: var(--brass);
-    opacity: 0.5;
-}
-
-.card-main {
-    width: 100%;
-
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: clamp(1.8rem, 8vw, 2.6rem);
-}
-
-.hint {
-    margin: 2px 0 0;
-
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.06em;
-    color: var(--muted);
-    text-align: center;
-}
-
-@media (max-width: 420px) {
-    .app-header { padding: 12px 14px; }
-    .brand-name { font-size: 0.68rem; }
-    #card { padding: 30px 20px; min-height: 56vh; }
-}
-
-</style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background-color: var(--bg);
+      color: var(--on-surface);
+      font-family: 'Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', 'Heiti SC', sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      gap: 1.25rem;
+    }
+    header {
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    h1 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--on-surface-dim);
+    }
+    #deckSelector {
+      background-color: var(--surface);
+      color: var(--on-surface);
+      border: 1px solid var(--divider);
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      cursor: pointer;
+      outline: none;
+    }
+    #deckSelector:focus { border-color: var(--primary); }
+    #singleTapLabel {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--on-surface-dim);
+      cursor: pointer;
+      user-select: none;
+    }
+    #singleTapCheckbox {
+      accent-color: var(--primary);
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+    #flashcard-container {
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+      aspect-ratio: 3 / 4;
+    }
+    #card {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, var(--surface-2) 0%, var(--surface) 100%);
+      border: 1px solid var(--divider);
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: transform 0.12s ease;
+      overflow: hidden;
+    }
+    #card:active { transform: scale(0.985); }
+    .card-main {
+      width: 100%;
+      white-space: pre-line;
+      word-break: break-word;
+    }
+    #card.front .card-main {
+      font-size: 4rem;
+      font-weight: 500;
+      color: var(--on-surface);
+    }
+    #card.back .card-main {
+      font-size: 1.35rem;
+      color: var(--on-surface);
+      line-height: 1.7;
+    }
+    #card.small .card-main { font-size: 1rem; }
+    #card.small.front .card-main { font-size: 2.25rem; }
+    .prev-answer {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      right: 1rem;
+      background: rgba(15, 17, 21, 0.75);
+      color: var(--accent);
+      border: 1px solid rgba(128, 203, 196, 0.25);
+      padding: 0.6rem 0.9rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      text-align: center;
+      white-space: pre-line;
+      backdrop-filter: blur(6px);
+      z-index: 2;
+      pointer-events: none;
+    }
+    footer {
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--on-surface-dim);
+    }
+    #state {
+      color: var(--primary);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    @media (max-width: 480px) {
+      #card.front .card-main { font-size: 3rem; }
+      #card.back .card-main { font-size: 1.15rem; }
+      header { flex-wrap: wrap; }
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <h1>印 Flashcards</h1>
+    <select id="deckSelector"></select>
+  </header>
 
-<div class="bg-texture" aria-hidden="true"></div>
+  <label id="singleTapLabel">
+    <input type="checkbox" id="singleTapCheckbox" />
+    Single tap
+  </label>
 
-<header class="app-header">
+  <div id="flashcard-container">
+    <div id="card" class="front"><div class="card-main"></div></div>
+  </div>
 
-    <div class="brand">
-        <span class="brand-mark">印</span>
-        <span class="brand-name">Flashcards</span>
-    </div>
-
-    <label id="singleTapToggle" class="tap-toggle">
-        <span class="tap-toggle-label">Single tap</span>
-        <span class="switch">
-            <input type="checkbox" id="singleTapCheckbox">
-            <span class="switch-track"><span class="switch-knob"></span></span>
-        </span>
-    </label>
-
-</header>
-
-<main class="stage">
-
-    <div class="deck-row">
-        <label class="field-label" for="deckSelector">Deck</label>
-        <select id="deckSelector"></select>
-    </div>
-
-    <div class="status-row">
-        <span id="counter"></span>
-        <span id="state"></span>
-    </div>
-
-    <div id="card"></div>
-
-    <p class="hint">tap left to go back · tap right to flip / advance</p>
-
-</main>
+  <footer>
+    <div id="counter">Card 0 of 0</div>
+    <div id="state">LOADING</div>
+  </footer>
 
 <script>
-
 const decks = {};
-
 function registerDeck(name, cards) {
     decks[name] = cards;
 }
-
 </script>
 
 <script src="decks/colours.js"></script>
@@ -497,225 +197,144 @@ function registerDeck(name, cards) {
 <script src="decks/exams_career_life.js"></script>
 
 <script>
+    let currentDeck = [];
+    let currentIndex = 0;
+    let isFront = true;
+    let singleTapMode = false;
 
-const selector = document.getElementById("deckSelector");
-const cardElement = document.getElementById("card");
-const counterElement = document.getElementById("counter");
-const stateElement = document.getElementById("state");
-const singleTapCheckbox = document.getElementById("singleTapCheckbox");
+    const deckSelector = document.getElementById("deckSelector");
+    const singleTapCheckbox = document.getElementById("singleTapCheckbox");
+    const cardEl = document.getElementById("card");
+    const cardMain = cardEl.querySelector(".card-main");
+    const counterEl = document.getElementById("counter");
+    const stateEl = document.getElementById("state");
+    const container = document.getElementById("flashcard-container");
 
-let cards = [];
-let currentCard = 0;
-let showingBack = false;
-
-let singleTapMode = false;
-let lastAnswer = "";
-
-function shuffle(array) {
-
-    for (let i = array.length - 1; i > 0; i--) {
-
-        const j = Math.floor(Math.random() * (i + 1));
-
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
-
-// Pulls a short answer out of a card's back text without needing the deck
-// files themselves to follow any particular format. Vocab cards (type 1-3)
-// already have a short 3-line back, so those are used as-is. Sentence cards
-// (type 4) bury the actual answer inside an "Options:" list alongside several
-// other valid options — for those we just take the first option's three
-// lines (hanzi / pinyin / meaning) rather than the whole sentence + list.
-function getBriefAnswer(card) {
-
-    if (!card || !card.back) return "";
-
-    const text = card.back;
-    const optionsIndex = text.indexOf("Options:");
-
-    if (optionsIndex !== -1) {
-
-        const afterOptions = text.slice(optionsIndex + "Options:".length);
-        const lines = afterOptions.split("\n").map(l => l.trim()).filter(Boolean);
-
-        if (lines.length >= 3) {
-            const firstLine = lines[0].replace(/^\d+\.\s*/, "");
-            return [firstLine, lines[1], lines[2]].join("\n");
+    function shuffle(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
         }
+        return arr;
+    }
 
+    function getBriefAnswer(card) {
+        if (!card || !card.back) return "";
+        const text = card.back;
+        const optionsIndex = text.indexOf("Options:");
+        if (optionsIndex !== -1) {
+            const afterOptions = text.slice(optionsIndex + "Options:".length);
+            const lines = afterOptions.split("\n").map(l => l.trim()).filter(Boolean);
+            if (lines.length >= 3) {
+                const firstLine = lines[0].replace(/^\d+\.\s*/, "");
+                return [firstLine, lines[1], lines[2]].join("\n");
+            }
+            return lines.slice(0, 3).join("\n");
+        }
+        const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
         return lines.slice(0, 3).join("\n");
     }
 
-    const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
-    return lines.slice(0, 3).join("\n");
-}
-
-function loadDeck(name) {
-
-    cards = [...decks[name]];
-
-    shuffle(cards);
-
-    currentCard = 0;
-    showingBack = false;
-    lastAnswer = "";
-
-    render();
-}
-
-function render() {
-
-    if (!cards.length) return;
-
-    const card = cards[currentCard];
-
-    counterElement.textContent =
-        `Card ${currentCard + 1} of ${cards.length}`;
-
-    if (singleTapMode) {
-
-        stateElement.textContent = "TAP TO ADVANCE";
-
-        cardElement.className = "front";
-        cardElement.innerHTML = "";
-
-        if (lastAnswer) {
-
-            cardElement.classList.add("stacked");
-
-            const answerDiv = document.createElement("div");
-            answerDiv.className = "prev-answer";
-            answerDiv.textContent = lastAnswer;
-
-            const divider = document.createElement("div");
-            divider.className = "prev-divider";
-            divider.textContent = "━━━━━━━━━━";
-
-            const frontDiv = document.createElement("div");
-            frontDiv.className = "card-main";
-            frontDiv.textContent = card.front;
-
-            cardElement.appendChild(answerDiv);
-            cardElement.appendChild(divider);
-            cardElement.appendChild(frontDiv);
-
-            if ((lastAnswer.length + card.front.length) > 100) {
-                cardElement.classList.add("small");
-            }
-
-        } else {
-            cardElement.textContent = card.front;
-        }
-
-        return;
+    function clearPreview() {
+        const existing = container.querySelector(".prev-answer");
+        if (existing) existing.remove();
     }
 
-    if (showingBack) {
-
-        stateElement.textContent = "BACK";
-
-        cardElement.className = "back";
-
-        cardElement.textContent =
-            card.front +
-            "\n\n━━━━━━━━━━\n\n" +
-            card.back;
-
-        if ((card.front + card.back).length > 120) {
-            cardElement.classList.add("small");
-        }
-
-    } else {
-
-        stateElement.textContent = "FRONT";
-
-        cardElement.className = "front";
-
-        cardElement.textContent = card.front;
+    function showPreview(card) {
+        clearPreview();
+        const el = document.createElement("div");
+        el.className = "prev-answer";
+        el.textContent = getBriefAnswer(card);
+        container.insertBefore(el, cardEl);
     }
-}
 
-cardElement.addEventListener("click", (e) => {
+    function render() {
+        const card = currentDeck[currentIndex];
+        clearPreview();
+        cardEl.classList.remove("front", "back", "small");
 
-    const rect = cardElement.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const isLeftSide = x < rect.width / 2;
-
-    if (singleTapMode) {
-
-        if (isLeftSide) {
-            currentCard = Math.max(0, currentCard - 1);
+        if (singleTapMode) {
+            cardEl.classList.add("front");
+            cardMain.textContent = card.front;
+            stateEl.textContent = "TAP TO ADVANCE";
+            if (currentIndex > 0) showPreview(currentDeck[currentIndex - 1]);
+        } else if (isFront) {
+            cardEl.classList.add("front");
+            cardMain.textContent = card.front;
+            stateEl.textContent = "FRONT";
         } else {
-            currentCard++;
-            if (currentCard >= cards.length) {
-                shuffle(cards);
-                currentCard = 0;
-            }
+            cardEl.classList.add("back");
+            cardMain.textContent = card.front + "\n\n━━━━━━━━━━\n\n" + card.back;
+            stateEl.textContent = "BACK";
         }
 
-        lastAnswer = currentCard > 0 ? getBriefAnswer(cards[currentCard - 1]) : "";
-        showingBack = false;
+        if ((card.front + card.back).length > 120) cardEl.classList.add("small");
+        counterEl.textContent = "Card " + (currentIndex + 1) + " of " + currentDeck.length;
+    }
 
+    function advanceCard() {
+        if (currentIndex + 1 >= currentDeck.length) {
+            shuffle(currentDeck);
+            currentIndex = 0;
+        } else {
+            currentIndex++;
+        }
+        isFront = true;
+    }
+
+    function retreatCard() {
+        if (currentIndex > 0) currentIndex--;
+    }
+
+    cardEl.addEventListener("click", (e) => {
+        const rect = cardEl.getBoundingClientRect();
+        const isRight = (e.clientX - rect.left) > rect.width / 2;
+
+        if (singleTapMode) {
+            if (isRight) advanceCard(); else retreatCard();
+            render();
+            return;
+        }
+
+        if (isRight) {
+            if (isFront) isFront = false; else advanceCard();
+        } else {
+            if (!isFront) isFront = true; else { retreatCard(); isFront = false; }
+        }
         render();
-        return;
-    }
+    });
 
-    if (isLeftSide) {
-
-        if (showingBack) {
-            showingBack = false;
-        } else {
-            // already on front → just go to previous card
-			currentCard = Math.max(0, currentCard - 1);
-			showingBack = true;
-        }
-
+    singleTapCheckbox.addEventListener("change", () => {
+        singleTapMode = singleTapCheckbox.checked;
+        isFront = true;
+        clearPreview();
         render();
-        return;
-    }
+    });
 
-    // RIGHT SIDE → forward / flip logic
+    deckSelector.addEventListener("change", () => loadDeck(deckSelector.value));
 
-    if (!showingBack) {
-        showingBack = true;
-    } else {
-        showingBack = false;
-        currentCard++;
-
-        if (currentCard >= cards.length) {
-            shuffle(cards);
-            currentCard = 0;
+    function populateDeckSelector() {
+        deckSelector.innerHTML = "";
+        for (const name of Object.keys(decks)) {
+            const opt = document.createElement("option");
+            opt.value = name;
+            opt.textContent = name;
+            deckSelector.appendChild(opt);
         }
     }
 
-    render();
-});
+    function loadDeck(name) {
+        currentDeck = shuffle(decks[name].slice());
+        currentIndex = 0;
+        isFront = true;
+        clearPreview();
+        render();
+    }
 
-singleTapCheckbox.addEventListener("change", (e) => {
-    singleTapMode = e.target.checked;
-    lastAnswer = "";
-    showingBack = false;
-    render();
-});
-
-Object.keys(decks).forEach(name => {
-
-    const option = document.createElement("option");
-
-    option.value = name;
-    option.textContent = name;
-
-    selector.appendChild(option);
-});
-
-loadDeck(Object.keys(decks)[0]);
-
-selector.addEventListener("change", e => {
-    loadDeck(e.target.value);
-});
-
+    populateDeckSelector();
+    if (Object.keys(decks).length > 0) {
+        loadDeck(Object.keys(decks)[0]);
+    }
 </script>
-
 </body>
 </html>
