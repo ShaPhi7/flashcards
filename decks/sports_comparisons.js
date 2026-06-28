@@ -320,4 +320,164 @@ front:'bei bian',
 back:`北边\nběi biān\nNorth side; northern area`
 },
 
+{
+type:1,
+front:'赢',
+back:`赢\nyíng\nTo win`
+},
+{
+type:2,
+front:'To win',
+back:`赢\nyíng\nTo win`
+},
+{
+type:3,
+front:'ying',
+back:`赢\nyíng\nTo win`
+},
+
+{
+type:1,
+front:'输',
+back:`输\nshū\nTo lose`
+},
+{
+type:2,
+front:'To lose',
+back:`输\nshū\nTo lose`
+},
+{
+type:3,
+front:'shu',
+back:`输\nshū\nTo lose`
+},
+
+{
+type:1,
+front:'队',
+back:`队\nduì\nTeam`
+},
+{
+type:2,
+front:'Team',
+back:`队\nduì\nTeam`
+},
+{
+type:3,
+front:'dui',
+back:`队\nduì\nTeam`
+},
+
+{
+type:1,
+front:'教练',
+back:`教练\njiào liàn\nCoach; trainer`
+},
+{
+type:2,
+front:'Coach; trainer',
+back:`教练\njiào liàn\nCoach; trainer`
+},
+{
+type:3,
+front:'jiao lian',
+back:`教练\njiào liàn\nCoach; trainer`
+},
+
+{
+type:1,
+front:'得分',
+back:`得分\ndé fēn\nTo score (a point)`
+},
+{
+type:2,
+front:'To score (a point)',
+back:`得分\ndé fēn\nTo score (a point)`
+},
+{
+type:3,
+front:'de fen',
+back:`得分\ndé fēn\nTo score (a point)`
+},
+
+{
+type:1,
+front:'加油',
+back:`加油\njiā yóu\nCome on! / Go for it! / Cheer up!`
+},
+{
+type:2,
+front:'Come on! / Go for it! / Cheer up!',
+back:`加油\njiā yóu\nCome on! / Go for it! / Cheer up!`
+},
+{
+type:3,
+front:'jia you',
+back:`加油\njiā yóu\nCome on! / Go for it! / Cheer up!`
+},
+
+{
+type:1,
+front:'参加',
+back:`参加\ncān jiā\nTo participate; to join`
+},
+{
+type:2,
+front:'To participate; to join',
+back:`参加\ncān jiā\nTo participate; to join`
+},
+{
+type:3,
+front:'can jia',
+back:`参加\ncān jiā\nTo participate; to join`
+},
+
+{
+type:1,
+front:'练习',
+back:`练习\nliàn xí\nTo practise`
+},
+{
+type:2,
+front:'To practise',
+back:`练习\nliàn xí\nTo practise`
+},
+{
+type:3,
+front:'lian xi',
+back:`练习\nliàn xí\nTo practise`
+},
+
+{
+type:1,
+front:'体育馆',
+back:`体育馆\ntǐ yù guǎn\nSports hall; gymnasium`
+},
+{
+type:2,
+front:'Sports hall; gymnasium',
+back:`体育馆\ntǐ yù guǎn\nSports hall; gymnasium`
+},
+{
+type:3,
+front:'ti yu guan',
+back:`体育馆\ntǐ yù guǎn\nSports hall; gymnasium`
+},
+
+{
+type:1,
+front:'冠军',
+back:`冠军\nguàn jūn\nChampion`
+},
+{
+type:2,
+front:'Champion',
+back:`冠军\nguàn jūn\nChampion`
+},
+{
+type:3,
+front:'guan jun',
+back:`冠军\nguàn jūn\nChampion`
+},
+
 ]);

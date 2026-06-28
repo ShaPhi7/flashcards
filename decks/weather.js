@@ -3,489 +3,263 @@ registerDeck("Weather", [
 {
 type:1,
 front:"热",
-back:`English:
-Hot
-
-Chinese:
-热
-
-Pinyin:
-rè`
+back:`热\nrè\nHot`
 },
 {
 type:2,
 front:"Hot",
-back:`English:
-Hot
-
-Chinese:
-热
-
-Pinyin:
-rè`
+back:`热\nrè\nHot`
 },
 {
 type:3,
 front:"re",
-back:`English:
-Hot
-
-Chinese:
-热
-
-Pinyin:
-rè`
+back:`热\nrè\nHot`
 },
 
 {
 type:1,
 front:"冷",
-back:`English:
-Cold
-
-Chinese:
-冷
-
-Pinyin:
-lěng`
+back:`冷\nlěng\nCold`
 },
 {
 type:2,
 front:"Cold",
-back:`English:
-Cold
-
-Chinese:
-冷
-
-Pinyin:
-lěng`
+back:`冷\nlěng\nCold`
 },
 {
 type:3,
 front:"leng",
-back:`English:
-Cold
-
-Chinese:
-冷
-
-Pinyin:
-lěng`
+back:`冷\nlěng\nCold`
 },
 
 {
 type:1,
 front:"暖和",
-back:`English:
-Warm
-
-Chinese:
-暖和
-
-Pinyin:
-nuǎn huo`
+back:`暖和\nnuǎn huo\nWarm`
 },
 {
 type:2,
 front:"Warm",
-back:`English:
-Warm
-
-Chinese:
-暖和
-
-Pinyin:
-nuǎn huo`
+back:`暖和\nnuǎn huo\nWarm`
 },
 {
 type:3,
 front:"nuan huo",
-back:`English:
-Warm
-
-Chinese:
-暖和
-
-Pinyin:
-nuǎn huo`
+back:`暖和\nnuǎn huo\nWarm`
 },
 
 {
 type:1,
 front:"凉快",
-back:`English:
-Cool
-
-Chinese:
-凉快
-
-Pinyin:
-liáng kuai`
+back:`凉快\nliáng kuai\nCool`
 },
 {
 type:2,
 front:"Cool",
-back:`English:
-Cool
-
-Chinese:
-凉快
-
-Pinyin:
-liáng kuai`
+back:`凉快\nliáng kuai\nCool`
 },
 {
 type:3,
 front:"liang kuai",
-back:`English:
-Cool
-
-Chinese:
-凉快
-
-Pinyin:
-liáng kuai`
+back:`凉快\nliáng kuai\nCool`
 },
 
 {
 type:1,
 front:"晴天",
-back:`English:
-Sunny
-
-Chinese:
-晴天
-
-Pinyin:
-qíng tiān`
+back:`晴天\nqíng tiān\nSunny`
 },
 {
 type:2,
 front:"Sunny",
-back:`English:
-Sunny
-
-Chinese:
-晴天
-
-Pinyin:
-qíng tiān`
+back:`晴天\nqíng tiān\nSunny`
 },
 {
 type:3,
 front:"qing tian",
-back:`English:
-Sunny
-
-Chinese:
-晴天
-
-Pinyin:
-qíng tiān`
+back:`晴天\nqíng tiān\nSunny`
 },
 
 {
 type:1,
 front:"多云",
-back:`English:
-Cloudy
-
-Chinese:
-多云
-
-Pinyin:
-duō yún`
+back:`多云\nduō yún\nCloudy`
 },
 {
 type:2,
 front:"Cloudy",
-back:`English:
-Cloudy
-
-Chinese:
-多云
-
-Pinyin:
-duō yún`
+back:`多云\nduō yún\nCloudy`
 },
 {
 type:3,
 front:"duo yun",
-back:`English:
-Cloudy
-
-Chinese:
-多云
-
-Pinyin:
-duō yún`
+back:`多云\nduō yún\nCloudy`
 },
 
 {
 type:1,
 front:"下雨",
-back:`English:
-Rainy
-
-Chinese:
-下雨
-
-Pinyin:
-xià yǔ`
+back:`下雨\nxià yǔ\nRaining`
 },
 {
 type:2,
-front:"Rainy",
-back:`English:
-Rainy
-
-Chinese:
-下雨
-
-Pinyin:
-xià yǔ`
+front:"Raining",
+back:`下雨\nxià yǔ\nRaining`
 },
 {
 type:3,
 front:"xia yu",
-back:`English:
-Rainy
-
-Chinese:
-下雨
-
-Pinyin:
-xià yǔ`
+back:`下雨\nxià yǔ\nRaining`
 },
 
 {
 type:1,
 front:"刮风",
-back:`English:
-Windy
-
-Chinese:
-刮风
-
-Pinyin:
-guā fēng`
+back:`刮风\nguā fēng\nWindy`
 },
 {
 type:2,
 front:"Windy",
-back:`English:
-Windy
-
-Chinese:
-刮风
-
-Pinyin:
-guā fēng`
+back:`刮风\nguā fēng\nWindy`
 },
 {
 type:3,
 front:"gua feng",
-back:`English:
-Windy
-
-Chinese:
-刮风
-
-Pinyin:
-guā fēng`
+back:`刮风\nguā fēng\nWindy`
 },
 
 {
 type:1,
 front:"下雪",
-back:`English:
-Snowing
-
-Chinese:
-下雪
-
-Pinyin:
-xià xuě`
+back:`下雪\nxià xuě\nSnowing`
 },
 {
 type:2,
 front:"Snowing",
-back:`English:
-Snowing
-
-Chinese:
-下雪
-
-Pinyin:
-xià xuě`
+back:`下雪\nxià xuě\nSnowing`
 },
 {
 type:3,
 front:"xia xue",
-back:`English:
-Snowing
-
-Chinese:
-下雪
-
-Pinyin:
-xià xuě`
+back:`下雪\nxià xuě\nSnowing`
 },
 
 {
 type:1,
 front:"天气",
-back:`English:
-Weather
-
-Chinese:
-天气
-
-Pinyin:
-tiān qì`
+back:`天气\ntiān qì\nWeather`
 },
 {
 type:2,
 front:"Weather",
-back:`English:
-Weather
-
-Chinese:
-天气
-
-Pinyin:
-tiān qì`
+back:`天气\ntiān qì\nWeather`
 },
 {
 type:3,
 front:"tian qi",
-back:`English:
-Weather
-
-Chinese:
-天气
-
-Pinyin:
-tiān qì`
+back:`天气\ntiān qì\nWeather`
 },
 
 {
 type:4,
-front:"今天的天气很 ____。",
-back:`English:
-Today's weather is ____.
+front:"今天的天气很热，我想去____。",
+back:`Today's weather is very hot; I want to go to ____.
 
-Chinese:
-今天的天气很 ____。
-
-Pinyin:
-jīn tiān de tiān qì hěn ____.
+今天的天气很热，我想去____。
+jīn tiān de tiān qì hěn rè, wǒ xiǎng qù ____.
 
 Options:
 
-1. 热
-rè
-hot
+1. 游泳池
+yóu yǒng chí
+the swimming pool
 
-2. 冷
-lěng
-cold
+2. 海边
+hǎi biān
+the beach
 
-3. 暖和
-nuǎn huo
-warm
+3. 图书馆
+tú shū guǎn
+the library
 
-4. 凉快
-liáng kuai
-cool
+4. 公园
+gōng yuán
+the park
 
-5. 好
-hǎo
-good`
+5. 商店
+shāng diàn
+the shops`
 },
 
 {
 type:4,
-front:"因为天气很好，所以我们去 ____。",
-back:`English:
-Because the weather is nice, we're going to ____.
+front:"因为天气很好是晴天，所以我们去____。",
+back:`Because the weather is nice and sunny, we're going to ____.
 
-Chinese:
-因为天气很好，所以我们去 ____。
-
-Pinyin:
-yīn wèi tiān qì hěn hǎo, suǒ yǐ wǒ men qù ____.
+因为天气很好是晴天，所以我们去____。
+yīn wèi tiān qì hěn hǎo shì qíng tiān, suǒ yǐ wǒ men qù ____.
 
 Options:
 
 1. 公园
 gōng yuán
-park
+the park
 
 2. 海边
 hǎi biān
-beach
+the beach
 
-3. 学校
-xué xiào
-school
+3. 爬山
+pá shān
+hiking
 
-4. 商店
-shāng diàn
-shop
+4. 骑车
+qí chē
+cycling
 
-5. 餐厅
-cān tīng
-restaurant`
+5. 野餐
+yě cān
+a picnic`
 },
 
 {
 type:4,
-front:"虽然下雨了，但是我还是要 ____。",
-back:`English:
-Although it is raining, I still need to ____.
+front:"虽然下雨了，但是我还是要出门，需要带____。",
+back:`Although it's raining, I still have to go out; I need to bring a ____.
 
-Chinese:
-虽然下雨了，但是我还是要 ____。
-
-Pinyin:
-suī rán xià yǔ le, dàn shì wǒ hái shì yào ____.
+虽然下雨了，但是我还是要出门，需要带____。
+suī rán xià yǔ le, dàn shì wǒ hái shì yào chū mén, xū yào dài ____.
 
 Options:
 
-1. 工作
-gōng zuò
-work
+1. 雨伞
+yǔ sǎn
+umbrella
 
-2. 学习
-xué xí
-study
+2. 雨衣
+yǔ yī
+raincoat
 
-3. 买东西
-mǎi dōng xi
-shop
+3. 外套
+wài tào
+coat
 
-4. 开车
-kāi chē
-drive
+4. 包
+bāo
+bag
 
-5. 运动
-yùn dòng
-exercise`
+5. 帽子
+mào zi
+hat`
 },
 
 {
 type:4,
-front:"如果明天下雪，我会 ____。",
-back:`English:
-If it snows tomorrow, I will ____.
+front:"如果明天下雪，我想在家____。",
+back:`If it snows tomorrow, I want to ____ at home.
 
-Chinese:
-如果明天下雪，我会 ____。
-
-Pinyin:
-rú guǒ míng tiān xià xuě, wǒ huì ____.
+如果明天下雪，我想在家____。
+rú guǒ míng tiān xià xuě, wǒ xiǎng zài jiā ____.
 
 Options:
 
@@ -512,50 +286,42 @@ cook`
 
 {
 type:4,
-front:"天气热的时候，我喜欢喝 ____。",
-back:`English:
-When the weather is hot, I like drinking ____.
+front:"天气热的时候，我喜欢喝____。",
+back:`When the weather is hot, I like drinking ____.
 
-Chinese:
-天气热的时候，我喜欢喝 ____。
-
-Pinyin:
+天气热的时候，我喜欢喝____。
 tiān qì rè de shí hou, wǒ xǐ huān hē ____.
 
 Options:
 
-1. 水
-shuǐ
-water
+1. 冰水
+bīng shuǐ
+iced water
 
-2. 茶
-chá
-tea
+2. 冰茶
+bīng chá
+iced tea
 
-3. 咖啡
-kā fēi
-coffee
-
-4. 果汁
+3. 果汁
 guǒ zhī
 juice
 
-5. 牛奶
-niú nǎi
-milk`
+4. 冷咖啡
+lěng kā fēi
+cold coffee
+
+5. 冰淇淋
+bīng qí lín
+ice cream`
 },
 
 {
 type:4,
-front:"天气冷的时候，我穿 ____。",
-back:`English:
-When the weather is cold, I wear ____.
+front:"天气冷的时候，我喜欢穿____出门。",
+back:`When the weather is cold, I like wearing ____ when going out.
 
-Chinese:
-天气冷的时候，我穿 ____。
-
-Pinyin:
-tiān qì lěng de shí hou, wǒ chuān ____.
+天气冷的时候，我喜欢穿____出门。
+tiān qì lěng de shí hou, wǒ xǐ huān chuān ____ chū mén.
 
 Options:
 
@@ -567,83 +333,75 @@ coat
 máo yī
 jumper
 
-3. 衬衫
-chèn shān
-shirt
+3. 羽绒服
+yǔ róng fú
+down jacket
 
-4. 裤子
-kù zi
-trousers
+4. 围巾
+wéi jīn
+scarf
 
-5. 帽子
-mào zi
-hat`
+5. 手套
+shǒu tào
+gloves`
 },
 
 {
 type:4,
-front:"今天刮风，所以我要带 ____。",
-back:`English:
-It's windy today, so I'm taking ____.
+front:"今天刮风，所以我要____。",
+back:`It's windy today, so I need to ____.
 
-Chinese:
-今天刮风，所以我要带 ____。
-
-Pinyin:
-jīn tiān guā fēng, suǒ yǐ wǒ yào dài ____.
+今天刮风，所以我要____。
+jīn tiān guā fēng, suǒ yǐ wǒ yào ____.
 
 Options:
 
-1. 帽子
-mào zi
-hat
+1. 戴帽子
+dài mào zi
+wear a hat
 
-2. 雨伞
-yǔ sǎn
-umbrella
+2. 穿外套
+chuān wài tào
+wear a coat
 
-3. 水
-shuǐ
-water
+3. 带围巾
+dài wéi jīn
+bring a scarf
 
-4. 包
-bāo
-bag
+4. 关窗户
+guān chuāng hu
+close the windows
 
-5. 手机
-shǒu jī
-mobile phone`
+5. 待在室内
+dāi zài shì nèi
+stay indoors`
 },
 
 {
 type:4,
-front:"我喜欢晴天，因为我可以 ____。",
-back:`English:
-I like sunny days because I can ____.
+front:"我喜欢晴天，因为我可以去____。",
+back:`I like sunny days because I can go ____.
 
-Chinese:
-我喜欢晴天，因为我可以 ____。
-
-Pinyin:
-wǒ xǐ huān qíng tiān, yīn wèi wǒ kě yǐ ____.
+我喜欢晴天，因为我可以去____。
+wǒ xǐ huān qíng tiān, yīn wèi wǒ kě yǐ qù ____.
 
 Options:
 
 1. 散步
 sàn bù
-walk
+for a walk
 
 2. 跑步
 pǎo bù
-run
+running
 
 3. 骑车
 qí chē
-cycle
+cycling
 
 4. 游泳
 yóu yǒng
-swim
+swimming
 
 5. 踢足球
 tī zú qiú
@@ -652,15 +410,11 @@ play football`
 
 {
 type:4,
-front:"多云的时候，我喜欢 ____。",
-back:`English:
-When it's cloudy, I like ____.
+front:"多云的时候，我喜欢待在家里____。",
+back:`When it's cloudy, I like staying at home ____.
 
-Chinese:
-多云的时候，我喜欢 ____。
-
-Pinyin:
-duō yún de shí hou, wǒ xǐ huān ____.
+多云的时候，我喜欢待在家里____。
+duō yún de shí hou, wǒ xǐ huān dāi zài jiā lǐ ____.
 
 Options:
 
@@ -668,56 +422,52 @@ Options:
 kàn shū
 reading
 
-2. 写字
-xiě zì
-writing
-
-3. 学中文
-xué zhōng wén
-studying Chinese
-
-4. 听音乐
+2. 听音乐
 tīng yīn yuè
 listening to music
 
-5. 画画
+3. 看电影
+kàn diàn yǐng
+watching films
+
+4. 画画
 huà huà
-drawing`
+drawing
+
+5. 做饭
+zuò fàn
+cooking`
 },
 
 {
 type:4,
-front:"我希望周末的天气 ____。",
-back:`English:
-I hope the weekend weather is ____.
+front:"我希望周末天气____，这样我们可以出去玩。",
+back:`I hope the weekend weather is ____; that way we can go out and have fun.
 
-Chinese:
-我希望周末的天气 ____。
-
-Pinyin:
-wǒ xī wàng zhōu mò de tiān qì ____.
+我希望周末天气____，这样我们可以出去玩。
+wǒ xī wàng zhōu mò tiān qì ____, zhè yàng wǒ men kě yǐ chū qù wán.
 
 Options:
 
-1. 热
-rè
-hot
-
-2. 暖和
+1. 暖和
 nuǎn huo
 warm
 
-3. 凉快
+2. 凉快
 liáng kuai
-cool
+cool and pleasant
 
-4. 晴天
-qíng tiān
-sunny
+3. 晴朗
+qíng lǎng
+clear and sunny
 
-5. 多云
-duō yún
-cloudy`
+4. 好
+hǎo
+good
+
+5. 舒服
+shū fu
+pleasant / comfortable`
 }
 
 ]);

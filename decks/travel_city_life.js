@@ -18,22 +18,6 @@ back:`一样\nyí yàng\nThe same / alike`
 
 {
 type:1,
-front:"哪儿",
-back:`哪儿\nnǎr\nWhere`
-},
-{
-type:2,
-front:"Where",
-back:`哪儿\nnǎr\nWhere`
-},
-{
-type:3,
-front:"nar",
-back:`哪儿\nnǎr\nWhere`
-},
-
-{
-type:1,
 front:"文化",
 back:`文化\nwén huà\nCulture`
 },
@@ -162,70 +146,6 @@ back:`热情\nrè qíng\nWarm / hospitable`
 
 {
 type:1,
-front:"城市",
-back:`城市\nchéng shì\nCity`
-},
-{
-type:2,
-front:"City",
-back:`城市\nchéng shì\nCity`
-},
-{
-type:3,
-front:"cheng shi",
-back:`城市\nchéng shì\nCity`
-},
-
-{
-type:1,
-front:"觉得",
-back:`觉得\njué de\nTo think / feel`
-},
-{
-type:2,
-front:"To think / feel",
-back:`觉得\njué de\nTo think / feel`
-},
-{
-type:3,
-front:"jue de",
-back:`觉得\njué de\nTo think / feel`
-},
-
-{
-type:1,
-front:"可以",
-back:`可以\nkě yǐ\nCan / may`
-},
-{
-type:2,
-front:"Can / may",
-back:`可以\nkě yǐ\nCan / may`
-},
-{
-type:3,
-front:"ke yi",
-back:`可以\nkě yǐ\nCan / may`
-},
-
-{
-type:1,
-front:"已经",
-back:`已经\nyǐ jīng\nAlready`
-},
-{
-type:2,
-front:"Already",
-back:`已经\nyǐ jīng\nAlready`
-},
-{
-type:3,
-front:"yi jing",
-back:`已经\nyǐ jīng\nAlready`
-},
-
-{
-type:1,
 front:"耐心",
 back:`耐心\nnài xīn\nPatient / patience`
 },
@@ -242,467 +162,312 @@ back:`耐心\nnài xīn\nPatient / patience`
 
 {
 type:4,
-front:"这两个城市不____。",
-back:`These two cities aren't ____.
+front:"这两个城市不一样，它们的____差别很大。",
+back:`These two cities are not the same; their ____ is very different.
 
-这两个城市不____。
-zhè liǎng gè chéng shì bù ____.
+这两个城市不一样，它们的____差别很大。
+zhè liǎng ge chéng shì bù yī yàng, tā men de ____ chā bié hěn dà.
 
 Options:
 
-1. 哪儿
-nǎr
-where
-
-2. 文化
+1. 文化
 wén huà
 culture
 
-3. 一样
-yí yàng
-the same / alike
-
-4. 安全
-ān quán
-safe
-
-5. 交通
+2. 交通
 jiāo tōng
-traffic`
+transport
+
+3. 气候
+qì hòu
+climate
+
+4. 饮食
+yǐn shí
+food / diet
+
+5. 语言
+yǔ yán
+language`
 },
 
 {
 type:4,
-front:"你想去____玩？",
-back:`Where do you want to go to have fun?
+front:"我很喜欢中国的文化，特别是____。",
+back:`I really like Chinese culture, especially ____.
 
-你想去____玩？
-nǐ xiǎng qù ____ wán?
+我很喜欢中国的文化，特别是____。
+wǒ hěn xǐ huān zhōng guó de wén huà, tè bié shì ____.
 
 Options:
 
-1. 哪儿
-nǎr
-where
+1. 传统节日
+chuán tǒng jié rì
+traditional festivals
 
-2. 文化
-wén huà
-culture
+2. 历史建筑
+lì shǐ jiàn zhù
+historical buildings
 
-3. 安全
-ān quán
-safe
+3. 饮食文化
+yǐn shí wén huà
+food culture
 
-4. 交通
-jiāo tōng
-traffic
+4. 传统音乐
+chuán tǒng yīn yuè
+traditional music
 
-5. 方便
-fāng biàn
-convenient`
+5. 武术
+wǔ shù
+martial arts`
 },
 
 {
 type:4,
-front:"我很喜欢中国的____。",
-back:`I really like Chinese ____.
+front:"这个城市晚上____吗？我一个人出去安全吗？",
+back:`Is this city ____ at night? Is it safe for me to go out alone?
 
-我很喜欢中国的____。
-wǒ hěn xǐ huān zhōng guó de ____.
+这个城市晚上____吗？我一个人出去安全吗？
+zhè ge chéng shì wǎn shang ____ ma? wǒ yī gè rén chū qù ān quán ma?
 
 Options:
 
-1. 安全
-ān quán
-safe
+1. 热闹
+rè nào
+lively
 
-2. 文化
-wén huà
-culture
+2. 安静
+ān jìng
+quiet
 
-3. 交通
-jiāo tōng
-traffic
+3. 繁华
+fán huá
+bustling
 
-4. 方便
-fāng biàn
-convenient
+4. 好玩
+hǎo wán
+fun
 
-5. 堵车
+5. 漂亮
+piào liang
+beautiful`
+},
+
+{
+type:4,
+front:"这里的交通很方便，你可以坐____去。",
+back:`The transport here is very convenient; you can take the ____ to get there.
+
+这里的交通很方便，你可以坐____去。
+zhè lǐ de jiāo tōng hěn fāng biàn, nǐ kě yǐ zuò ____ qù.
+
+Options:
+
+1. 地铁
+dì tiě
+metro
+
+2. 公共汽车
+gōng gòng qì chē
+bus
+
+3. 出租车
+chū zū chē
+taxi
+
+4. 火车
+huǒ chē
+train
+
+5. 飞机
+fēi jī
+plane`
+},
+
+{
+type:4,
+front:"坐地铁去机场很方便，而且不会____。",
+back:`Taking the metro to the airport is very convenient and you won't ____.
+
+坐地铁去机场很方便，而且不会____。
+zuò dì tiě qù jī chǎng hěn fāng biàn, ér qiě bù huì ____.
+
+Options:
+
+1. 堵车
 dǔ chē
-traffic jam`
+get stuck in traffic
+
+2. 迟到
+chí dào
+be late
+
+3. 走错路
+zǒu cuò lù
+go the wrong way
+
+4. 买错票
+mǎi cuò piào
+buy the wrong ticket
+
+5. 找不到路
+zhǎo bu dào lù
+get lost`
 },
 
 {
 type:4,
-front:"这个城市晚上____吗？",
-back:`Is this city ____ at night?
+front:"上班的时候常常堵车，所以很多人____上班。",
+back:`There are often traffic jams during commute time, so many people go to work by ____.
 
-这个城市晚上____吗？
-zhè ge chéng shì wǎn shang ____ ma?
+上班的时候常常堵车，所以很多人____上班。
+shàng bān de shí hou cháng cháng dǔ chē, suǒ yǐ hěn duō rén ____ shàng bān.
 
 Options:
 
-1. 交通
-jiāo tōng
-traffic
+1. 骑自行车
+qí zì xíng chē
+cycling
 
-2. 方便
-fāng biàn
-convenient
+2. 坐地铁
+zuò dì tiě
+taking the metro
 
-3. 堵车
-dǔ chē
-traffic jam
+3. 走路
+zǒu lù
+walking
 
-4. 安全
-ān quán
-safe
+4. 坐公共汽车
+zuò gōng gòng qì chē
+taking the bus
 
-5. 商店
-shāng diàn
-shop`
+5. 骑摩托车
+qí mó tuō chē
+riding a motorbike`
 },
 
 {
 type:4,
-front:"这里的____很方便。",
-back:`The ____ here is very convenient.
+front:"那家商店卖____，东西很便宜。",
+back:`That shop sells ____; things are very cheap.
 
-这里的____很方便。
-zhè lǐ de ____ hěn fāng biàn.
+那家商店卖____，东西很便宜。
+nà jiā shāng diàn mài ____, dōng xi hěn pián yi.
 
 Options:
 
-1. 方便
-fāng biàn
-convenient
+1. 衣服
+yī fu
+clothes
 
-2. 堵车
-dǔ chē
-traffic jam
+2. 食物
+shí wù
+food
 
-3. 商店
-shāng diàn
-shop
+3. 电子产品
+diàn zǐ chǎn pǐn
+electronics
 
-4. 游客
-yóu kè
-tourist
+4. 纪念品
+jì niàn pǐn
+souvenirs
 
-5. 交通
-jiāo tōng
-traffic`
+5. 书
+shū
+books`
 },
 
 {
 type:4,
-front:"坐地铁去机场很____。",
-back:`Taking the subway to the airport is very ____.
+front:"夏天这里有很多游客，因为这里____。",
+back:`In summer there are many tourists here because ____.
 
-坐地铁去机场很____。
-zuò dì tiě qù jī chǎng hěn ____.
+夏天这里有很多游客，因为这里____。
+xià tiān zhè lǐ yǒu hěn duō yóu kè, yīn wèi zhè lǐ ____.
 
 Options:
 
-1. 方便
-fāng biàn
-convenient
+1. 很有名
+hěn yǒu míng
+is very famous
 
-2. 堵车
-dǔ chē
-traffic jam
+2. 天气很好
+tiān qì hěn hǎo
+has nice weather
 
-3. 商店
-shāng diàn
-shop
+3. 景色很美
+jǐng sè hěn měi
+has beautiful scenery
 
-4. 游客
-yóu kè
-tourist
+4. 食物很好吃
+shí wù hěn hǎo chī
+has delicious food
 
-5. 热情
-rè qíng
-hospitable`
+5. 物价便宜
+wù jià pián yi
+has cheap prices`
 },
 
 {
 type:4,
-front:"上班的时候常常____。",
-back:`During commute time, there's often a ____.
+front:"这里的人很热情，总是____帮助游客。",
+back:`The people here are very warm and always ____ to help tourists.
 
-上班的时候常常____。
-shàng bān de shí hou cháng cháng ____.
+这里的人很热情，总是____帮助游客。
+zhè lǐ de rén hěn rè qíng, zǒng shì ____ bāng zhù yóu kè.
 
 Options:
 
-1. 商店
-shāng diàn
-shop
+1. 主动
+zhǔ dòng
+proactively
 
-2. 游客
-yóu kè
-tourist
+2. 耐心地
+nài xīn de
+patiently
 
-3. 堵车
-dǔ chē
-traffic jam
+3. 热心地
+rè xīn de
+enthusiastically
 
-4. 热情
-rè qíng
-hospitable
+4. 认真地
+rèn zhēn de
+earnestly
 
-5. 城市
-chéng shì
-city`
+5. 笑着
+xiào zhe
+with a smile`
 },
 
 {
 type:4,
-front:"那家____卖什么？",
-back:`What does that ____ sell?
+front:"学中文需要耐心，因为汉字____。",
+back:`Learning Chinese requires patience because the characters ____.
 
-那家____卖什么？
-nà jiā ____ mài shén me?
-
-Options:
-
-1. 游客
-yóu kè
-tourist
-
-2. 商店
-shāng diàn
-shop
-
-3. 热情
-rè qíng
-hospitable
-
-4. 城市
-chéng shì
-city
-
-5. 觉得
-jué de
-to think`
-},
-
-{
-type:4,
-front:"夏天这里有很多____。",
-back:`In summer there are many ____ here.
-
-夏天这里有很多____。
-xià tiān zhè lǐ yǒu hěn duō ____.
+学中文需要耐心，因为汉字____。
+xué zhōng wén xū yào nài xīn, yīn wèi hàn zì ____.
 
 Options:
 
-1. 热情
-rè qíng
-hospitable
+1. 很难写
+hěn nán xiě
+are hard to write
 
-2. 城市
-chéng shì
-city
+2. 很多
+hěn duō
+are very numerous
 
-3. 觉得
-jué de
-to think
+3. 很复杂
+hěn fù zá
+are very complex
 
-4. 游客
-yóu kè
-tourist
+4. 不容易记
+bù róng yì jì
+are not easy to memorise
 
-5. 可以
-kě yǐ
-can`
-},
-
-{
-type:4,
-front:"这里的人很____。",
-back:`The people here are very ____.
-
-这里的人很____。
-zhè lǐ de rén hěn ____.
-
-Options:
-
-1. 城市
-chéng shì
-city
-
-2. 觉得
-jué de
-to think
-
-3. 可以
-kě yǐ
-can
-
-4. 已经
-yǐ jīng
-already
-
-5. 热情
-rè qíng
-hospitable`
-},
-
-{
-type:4,
-front:"天津是一个很大的____。",
-back:`Tianjin is a very big ____.
-
-天津是一个很大的____。
-tiān jīn shì yí gè hěn dà de ____.
-
-Options:
-
-1. 城市
-chéng shì
-city
-
-2. 觉得
-jué de
-to think
-
-3. 可以
-kě yǐ
-can
-
-4. 已经
-yǐ jīng
-already
-
-5. 耐心
-nài xīn
-patience`
-},
-
-{
-type:4,
-front:"你____天津怎么样？",
-back:`What do you ____ about Tianjin?
-
-你____天津怎么样？
-nǐ ____ tiān jīn zěn me yàng?
-
-Options:
-
-1. 可以
-kě yǐ
-can
-
-2. 已经
-yǐ jīng
-already
-
-3. 觉得
-jué de
-to think
-
-4. 耐心
-nài xīn
-patience
-
-5. 一样
-yí yàng
-the same`
-},
-
-{
-type:4,
-front:"我____在公园跑步。",
-back:`I ____ run in the park.
-
-我____在公园跑步。
-wǒ ____ zài gōng yuán pǎo bù.
-
-Options:
-
-1. 已经
-yǐ jīng
-already
-
-2. 可以
-kě yǐ
-can
-
-3. 耐心
-nài xīn
-patience
-
-4. 一样
-yí yàng
-the same
-
-5. 哪儿
-nǎr
-where`
-},
-
-{
-type:4,
-front:"我____熟悉这里的路了。",
-back:`I am ____ familiar with the roads here.
-
-我____熟悉这里的路了。
-wǒ ____ shú xī zhè lǐ de lù le.
-
-Options:
-
-1. 耐心
-nài xīn
-patience
-
-2. 一样
-yí yàng
-the same
-
-3. 哪儿
-nǎr
-where
-
-4. 已经
-yǐ jīng
-already
-
-5. 文化
-wén huà
-culture`
-},
-
-{
-type:4,
-front:"学中文需要____。",
-back:`Learning Chinese requires ____.
-
-学中文需要____。
-xué zhōng wén xū yào ____.
-
-Options:
-
-1. 一样
-yí yàng
-the same
-
-2. 哪儿
-nǎr
-where
-
-3. 文化
-wén huà
-culture
-
-4. 安全
-ān quán
-safe
-
-5. 耐心
-nài xīn
-patience`
-},
+5. 要练习很多
+yào liàn xí hěn duō
+require a lot of practice`
+}
 
 ]);

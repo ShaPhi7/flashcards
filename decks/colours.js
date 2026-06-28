@@ -3,721 +3,471 @@ registerDeck("Colours", [
 {
 type:1,
 front:"红色",
-back:`English:
-Red
-
-Chinese:
-红色
-
-Pinyin:
-hóng sè`
+back:`红色\nhóng sè\nRed`
 },
 {
 type:2,
 front:"Red",
-back:`English:
-Red
-
-Chinese:
-红色
-
-Pinyin:
-hóng sè`
+back:`红色\nhóng sè\nRed`
 },
 {
 type:3,
 front:"hong se",
-back:`English:
-Red
-
-Chinese:
-红色
-
-Pinyin:
-hóng sè`
+back:`红色\nhóng sè\nRed`
 },
 
 {
 type:1,
 front:"蓝色",
-back:`English:
-Blue
-
-Chinese:
-蓝色
-
-Pinyin:
-lán sè`
+back:`蓝色\nlán sè\nBlue`
 },
 {
 type:2,
 front:"Blue",
-back:`English:
-Blue
-
-Chinese:
-蓝色
-
-Pinyin:
-lán sè`
+back:`蓝色\nlán sè\nBlue`
 },
 {
 type:3,
 front:"lan se",
-back:`English:
-Blue
-
-Chinese:
-蓝色
-
-Pinyin:
-lán sè`
+back:`蓝色\nlán sè\nBlue`
 },
 
 {
 type:1,
 front:"黄色",
-back:`English:
-Yellow
-
-Chinese:
-黄色
-
-Pinyin:
-huáng sè`
+back:`黄色\nhuáng sè\nYellow`
 },
 {
 type:2,
 front:"Yellow",
-back:`English:
-Yellow
-
-Chinese:
-黄色
-
-Pinyin:
-huáng sè`
+back:`黄色\nhuáng sè\nYellow`
 },
 {
 type:3,
 front:"huang se",
-back:`English:
-Yellow
-
-Chinese:
-黄色
-
-Pinyin:
-huáng sè`
+back:`黄色\nhuáng sè\nYellow`
 },
 
 {
 type:1,
 front:"绿色",
-back:`English:
-Green
-
-Chinese:
-绿色
-
-Pinyin:
-lǜ sè`
+back:`绿色\nlǜ sè\nGreen`
 },
 {
 type:2,
 front:"Green",
-back:`English:
-Green
-
-Chinese:
-绿色
-
-Pinyin:
-lǜ sè`
+back:`绿色\nlǜ sè\nGreen`
 },
 {
 type:3,
 front:"lv se",
-back:`English:
-Green
-
-Chinese:
-绿色
-
-Pinyin:
-lǜ sè`
+back:`绿色\nlǜ sè\nGreen`
 },
 
 {
 type:1,
 front:"黑色",
-back:`English:
-Black
-
-Chinese:
-黑色
-
-Pinyin:
-hēi sè`
+back:`黑色\nhēi sè\nBlack`
 },
 {
 type:2,
 front:"Black",
-back:`English:
-Black
-
-Chinese:
-黑色
-
-Pinyin:
-hēi sè`
+back:`黑色\nhēi sè\nBlack`
 },
 {
 type:3,
 front:"hei se",
-back:`English:
-Black
-
-Chinese:
-黑色
-
-Pinyin:
-hēi sè`
+back:`黑色\nhēi sè\nBlack`
 },
 
 {
 type:1,
 front:"白色",
-back:`English:
-White
-
-Chinese:
-白色
-
-Pinyin:
-bái sè`
+back:`白色\nbái sè\nWhite`
 },
 {
 type:2,
 front:"White",
-back:`English:
-White
-
-Chinese:
-白色
-
-Pinyin:
-bái sè`
+back:`白色\nbái sè\nWhite`
 },
 {
 type:3,
 front:"bai se",
-back:`English:
-White
-
-Chinese:
-白色
-
-Pinyin:
-bái sè`
+back:`白色\nbái sè\nWhite`
 },
 
 {
 type:1,
 front:"橙色",
-back:`English:
-Orange
-
-Chinese:
-橙色
-
-Pinyin:
-chéng sè`
+back:`橙色\nchéng sè\nOrange`
 },
 {
 type:2,
 front:"Orange",
-back:`English:
-Orange
-
-Chinese:
-橙色
-
-Pinyin:
-chéng sè`
+back:`橙色\nchéng sè\nOrange`
 },
 {
 type:3,
 front:"cheng se",
-back:`English:
-Orange
-
-Chinese:
-橙色
-
-Pinyin:
-chéng sè`
+back:`橙色\nchéng sè\nOrange`
 },
 
 {
 type:1,
 front:"紫色",
-back:`English:
-Purple
-
-Chinese:
-紫色
-
-Pinyin:
-zǐ sè`
+back:`紫色\nzǐ sè\nPurple`
 },
 {
 type:2,
 front:"Purple",
-back:`English:
-Purple
-
-Chinese:
-紫色
-
-Pinyin:
-zǐ sè`
+back:`紫色\nzǐ sè\nPurple`
 },
 {
 type:3,
 front:"zi se",
-back:`English:
-Purple
-
-Chinese:
-紫色
-
-Pinyin:
-zǐ sè`
+back:`紫色\nzǐ sè\nPurple`
 },
 
 {
 type:1,
 front:"粉红色",
-back:`English:
-Pink
-
-Chinese:
-粉红色
-
-Pinyin:
-fěn hóng sè`
+back:`粉红色\nfěn hóng sè\nPink`
 },
 {
 type:2,
 front:"Pink",
-back:`English:
-Pink
-
-Chinese:
-粉红色
-
-Pinyin:
-fěn hóng sè`
+back:`粉红色\nfěn hóng sè\nPink`
 },
 {
 type:3,
 front:"fen hong se",
-back:`English:
-Pink
-
-Chinese:
-粉红色
-
-Pinyin:
-fěn hóng sè`
+back:`粉红色\nfěn hóng sè\nPink`
 },
 
 {
 type:1,
 front:"棕色",
-back:`English:
-Brown
-
-Chinese:
-棕色
-
-Pinyin:
-zōng sè`
+back:`棕色\nzōng sè\nBrown`
 },
 {
 type:2,
 front:"Brown",
-back:`English:
-Brown
-
-Chinese:
-棕色
-
-Pinyin:
-zōng sè`
+back:`棕色\nzōng sè\nBrown`
 },
 {
 type:3,
 front:"zong se",
-back:`English:
-Brown
-
-Chinese:
-棕色
-
-Pinyin:
-zōng sè`
+back:`棕色\nzōng sè\nBrown`
 },
 
 {
 type:4,
-front:"我穿红色衣服，因为我是 ____。",
-back:`English:
-I wear red clothes because I am a ____.
+front:"我最喜欢红色，所以我的包是____的。",
+back:`I like red most, so my bag is ____.
 
-Chinese:
-我穿红色衣服，因为我是 ____。
-
-Pinyin:
-wǒ chuān hóng sè yī fu, yīn wèi wǒ shì ____.
+我最喜欢红色，所以我的包是____的。
+wǒ zuì xǐ huān hóng sè, suǒ yǐ wǒ de bāo shì ____ de.
 
 Options:
 
-1. 老师
-lǎo shī
-teacher
-
-2. 医生
-yī shēng
-doctor
-
-3. 律师
-lǜ shī
-lawyer
-
-4. 工程师
-gōng chéng shī
-engineer
-
-5. 学生
-xué shēng
-student`
-},
-
-{
-type:4,
-front:"虽然汽车是蓝色的，但是我更喜欢 ____。",
-back:`English:
-Although the car is blue, I prefer ____.
-
-Chinese:
-虽然汽车是蓝色的，但是我更喜欢 ____。
-
-Pinyin:
-suī rán qì chē shì lán sè de, dàn shì wǒ gèng xǐ huān ____.
-
-Options:
-
-1. 足球
-zú qiú
-football
-
-2. 篮球
-lán qiú
-basketball
-
-3. 网球
-wǎng qiú
-tennis
-
-4. 游泳
-yóu yǒng
-swimming
-
-5. 跑步
-pǎo bù
-running`
-},
-
-{
-type:4,
-front:"我喜欢绿色，所以我想养一只 ____。",
-back:`English:
-I like green, so I want to keep a ____.
-
-Chinese:
-我喜欢绿色，所以我想养一只 ____。
-
-Pinyin:
-wǒ xǐ huān lǜ sè, suǒ yǐ wǒ xiǎng yǎng yì zhī ____.
-
-Options:
-
-1. 狗
-gǒu
-dog
-
-2. 猫
-māo
-cat
-
-3. 兔子
-tù zi
-rabbit
-
-4. 鸟
-niǎo
-bird
-
-5. 鱼
-yú
-fish`
-},
-
-{
-type:4,
-front:"如果房间是白色的，我会在里面 ____。",
-back:`English:
-If the room is white, I will ____ in it.
-
-Chinese:
-如果房间是白色的，我会在里面 ____。
-
-Pinyin:
-rú guǒ fáng jiān shì bái sè de, wǒ huì zài lǐ miàn ____.
-
-Options:
-
-1. 学习
-xué xí
-study
-
-2. 工作
-gōng zuò
-work
-
-3. 睡觉
-shuì jiào
-sleep
-
-4. 看书
-kàn shū
-read
-
-5. 吃饭
-chī fàn
-eat`
-},
-
-{
-type:4,
-front:"我觉得黑色很漂亮，因为我喜欢 ____。",
-back:`English:
-I think black is beautiful because I like ____.
-
-Chinese:
-我觉得黑色很漂亮，因为我喜欢 ____。
-
-Pinyin:
-wǒ jué de hēi sè hěn piào liang, yīn wèi wǒ xǐ huān ____.
-
-Options:
-
-1. 音乐
-yīn yuè
-music
-
-2. 电影
-diàn yǐng
-films
-
-3. 历史
-lì shǐ
-history
-
-4. 科学
-kē xué
-science
-
-5. 艺术
-yì shù
-art`
-},
-
-{
-type:4,
-front:"黄色的花在 ____ 旁边。",
-back:`English:
-The yellow flowers are next to the ____.
-
-Chinese:
-黄色的花在 ____ 旁边。
-
-Pinyin:
-huáng sè de huā zài ____ páng biān.
-
-Options:
-
-1. 学校
-xué xiào
-school
-
-2. 医院
-yī yuàn
-hospital
-
-3. 商店
-shāng diàn
-shop
-
-4. 公园
-gōng yuán
-park
-
-5. 银行
-yín háng
-bank`
-},
-
-{
-type:4,
-front:"我的朋友喜欢蓝色，而且他会 ____。",
-back:`English:
-My friend likes blue and he can ____.
-
-Chinese:
-我的朋友喜欢蓝色，而且他会 ____。
-
-Pinyin:
-wǒ de péng you xǐ huān lán sè, ér qiě tā huì ____.
-
-Options:
-
-1. 唱歌
-chàng gē
-sing
-
-2. 跳舞
-tiào wǔ
-dance
-
-3. 做饭
-zuò fàn
-cook
-
-4. 开车
-kāi chē
-drive
-
-5. 画画
-huà huà
-draw`
-},
-
-{
-type:4,
-front:"红色的苹果和 ____ 都在桌子上。",
-back:`English:
-The red apples and ____ are both on the table.
-
-Chinese:
-红色的苹果和 ____ 都在桌子上。
-
-Pinyin:
-hóng sè de píng guǒ hé ____ dōu zài zhuō zi shàng.
-
-Options:
-
-1. 香蕉
-xiāng jiāo
-banana
-
-2. 橙子
-chéng zi
+1. 红色
+hóng sè
+red
+
+2. 粉红色
+fěn hóng sè
+pink
+
+3. 橙色
+chéng sè
 orange
 
-3. 葡萄
-pú tao
-grapes
+4. 紫色
+zǐ sè
+purple
 
-4. 梨
-lí
-pear
-
-5. 西瓜
-xī guā
-watermelon`
+5. 棕色
+zōng sè
+brown`
 },
 
 {
 type:4,
-front:"虽然天空是蓝色的，但是今天很 ____。",
-back:`English:
-Although the sky is blue, today is very ____.
+front:"他喜欢蓝色，所以买了一件____的衬衫。",
+back:`He likes blue, so he bought a ____ shirt.
 
-Chinese:
-虽然天空是蓝色的，但是今天很 ____。
-
-Pinyin:
-suī rán tiān kōng shì lán sè de, dàn shì jīn tiān hěn ____.
+他喜欢蓝色，所以买了一件____的衬衫。
+tā xǐ huān lán sè, suǒ yǐ mǎi le yī jiàn ____ de chèn shān.
 
 Options:
 
-1. 热
-rè
-hot
+1. 蓝色
+lán sè
+blue
 
-2. 冷
-lěng
-cold
+2. 绿色
+lǜ sè
+green
 
-3. 忙
-máng
-busy
+3. 黑色
+hēi sè
+black
 
-4. 安静
-ān jìng
-quiet
+4. 白色
+bái sè
+white
 
-5. 开心
+5. 灰色
+huī sè
+grey`
+},
+
+{
+type:4,
+front:"公园里有很多____的花。",
+back:`There are many ____ flowers in the park.
+
+公园里有很多____的花。
+gōng yuán lǐ yǒu hěn duō ____ de huā.
+
+Options:
+
+1. 黄色
+huáng sè
+yellow
+
+2. 红色
+hóng sè
+red
+
+3. 粉红色
+fěn hóng sè
+pink
+
+4. 白色
+bái sè
+white
+
+5. 紫色
+zǐ sè
+purple`
+},
+
+{
+type:4,
+front:"她穿了一件绿色的裙子和____的鞋子。",
+back:`She wore a green skirt and ____ shoes.
+
+她穿了一件绿色的裙子和____的鞋子。
+tā chuān le yī jiàn lǜ sè de qún zi hé ____ de xié zi.
+
+Options:
+
+1. 白色
+bái sè
+white
+
+2. 黑色
+hēi sè
+black
+
+3. 棕色
+zōng sè
+brown
+
+4. 橙色
+chéng sè
+orange
+
+5. 蓝色
+lán sè
+blue`
+},
+
+{
+type:4,
+front:"我家的墙是白色的，地板是____的。",
+back:`The walls of my home are white and the floor is ____.
+
+我家的墙是白色的，地板是____的。
+wǒ jiā de qiáng shì bái sè de, dì bǎn shì ____ de.
+
+Options:
+
+1. 棕色
+zōng sè
+brown
+
+2. 黑色
+hēi sè
+black
+
+3. 灰色
+huī sè
+grey
+
+4. 黄色
+huáng sè
+yellow
+
+5. 橙色
+chéng sè
+orange`
+},
+
+{
+type:4,
+front:"他买了一辆____的自行车。",
+back:`He bought a ____ bicycle.
+
+他买了一辆____的自行车。
+tā mǎi le yī liàng ____ de zì xíng chē.
+
+Options:
+
+1. 黑色
+hēi sè
+black
+
+2. 红色
+hóng sè
+red
+
+3. 蓝色
+lán sè
+blue
+
+4. 绿色
+lǜ sè
+green
+
+5. 橙色
+chéng sè
+orange`
+},
+
+{
+type:4,
+front:"我喜欢橙色，因为它让我觉得很____。",
+back:`I like orange because it makes me feel very ____.
+
+我喜欢橙色，因为它让我觉得很____。
+wǒ xǐ huān chéng sè, yīn wèi tā ràng wǒ jué de hěn ____.
+
+Options:
+
+1. 开心
 kāi xīn
-happy`
+happy
+
+2. 舒服
+shū fu
+comfortable
+
+3. 暖和
+nuǎn huo
+warm
+
+4. 放松
+fàng sōng
+relaxed
+
+5. 精神
+jīng shén
+energetic`
 },
 
 {
 type:4,
-front:"因为墙是白色的，所以我想挂一幅 ____。",
-back:`English:
-Because the wall is white, I want to hang a ____.
+front:"她的手机是____的，书包是紫色的。",
+back:`Her phone is ____ and her schoolbag is purple.
 
-Chinese:
-因为墙是白色的，所以我想挂一幅 ____。
-
-Pinyin:
-yīn wèi qiáng shì bái sè de, suǒ yǐ wǒ xiǎng guà yì fú ____.
+她的手机是____的，书包是紫色的。
+tā de shǒu jī shì ____ de, shū bāo shì zǐ sè de.
 
 Options:
 
-1. 画
-huà
-painting
+1. 粉红色
+fěn hóng sè
+pink
 
-2. 地图
-dì tú
-map
+2. 红色
+hóng sè
+red
 
-3. 照片
-zhào piàn
-photograph
+3. 白色
+bái sè
+white
 
-4. 海报
-hǎi bào
-poster
+4. 橙色
+chéng sè
+orange
 
-5. 书法
-shū fǎ
-calligraphy`
+5. 黄色
+huáng sè
+yellow`
+},
+
+{
+type:4,
+front:"这家店卖的衣服都是____色的。",
+back:`The clothes sold at this shop are all ____.
+
+这家店卖的衣服都是____色的。
+zhè jiā diàn mài de yī fu dōu shì ____ sè de.
+
+Options:
+
+1. 黑
+hēi
+black
+
+2. 白
+bái
+white
+
+3. 灰
+huī
+grey
+
+4. 棕
+zōng
+brown
+
+5. 蓝
+lán
+blue`
+},
+
+{
+type:4,
+front:"天空是蓝色的，草地是____的。",
+back:`The sky is blue and the grass is ____.
+
+天空是蓝色的，草地是____的。
+tiān kōng shì lán sè de, cǎo dì shì ____ de.
+
+Options:
+
+1. 绿色
+lǜ sè
+green
+
+2. 黄色
+huáng sè
+yellow
+
+3. 棕色
+zōng sè
+brown
+
+4. 白色
+bái sè
+white
+
+5. 橙色
+chéng sè
+orange`
 }
 
 ]);

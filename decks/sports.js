@@ -3,383 +3,169 @@ registerDeck("Sports & Activities", [
 {
 type:1,
 front:"游泳",
-back:`English:
-To swim / Swimming
-
-Chinese:
-游泳
-
-Pinyin:
-yóu yǒng`
+back:`游泳\nyóu yǒng\nTo swim / Swimming`
 },
 {
 type:2,
 front:"To swim / Swimming",
-back:`English:
-To swim / Swimming
-
-Chinese:
-游泳
-
-Pinyin:
-yóu yǒng`
+back:`游泳\nyóu yǒng\nTo swim / Swimming`
 },
 {
 type:3,
 front:"you yong",
-back:`English:
-To swim / Swimming
-
-Chinese:
-游泳
-
-Pinyin:
-yóu yǒng`
+back:`游泳\nyóu yǒng\nTo swim / Swimming`
 },
 
 {
 type:1,
 front:"滑冰",
-back:`English:
-To ice skate / Ice skating
-
-Chinese:
-滑冰
-
-Pinyin:
-huá bīng`
+back:`滑冰\nhuá bīng\nTo ice skate / Ice skating`
 },
 {
 type:2,
 front:"To ice skate / Ice skating",
-back:`English:
-To ice skate / Ice skating
-
-Chinese:
-滑冰
-
-Pinyin:
-huá bīng`
+back:`滑冰\nhuá bīng\nTo ice skate / Ice skating`
 },
 {
 type:3,
 front:"hua bing",
-back:`English:
-To ice skate / Ice skating
-
-Chinese:
-滑冰
-
-Pinyin:
-huá bīng`
+back:`滑冰\nhuá bīng\nTo ice skate / Ice skating`
 },
 
 {
 type:1,
 front:"滑雪",
-back:`English:
-To ski / Skiing
-
-Chinese:
-滑雪
-
-Pinyin:
-huá xuě`
+back:`滑雪\nhuá xuě\nTo ski / Skiing`
 },
 {
 type:2,
 front:"To ski / Skiing",
-back:`English:
-To ski / Skiing
-
-Chinese:
-滑雪
-
-Pinyin:
-huá xuě`
+back:`滑雪\nhuá xuě\nTo ski / Skiing`
 },
 {
 type:3,
 front:"hua xue",
-back:`English:
-To ski / Skiing
-
-Chinese:
-滑雪
-
-Pinyin:
-huá xuě`
+back:`滑雪\nhuá xuě\nTo ski / Skiing`
 },
 
 {
 type:1,
 front:"踢足球",
-back:`English:
-To play football
-
-Chinese:
-踢足球
-
-Pinyin:
-tī zú qiú`
+back:`踢足球\ntī zú qiú\nTo play football`
 },
 {
 type:2,
 front:"To play football",
-back:`English:
-To play football
-
-Chinese:
-踢足球
-
-Pinyin:
-tī zú qiú`
+back:`踢足球\ntī zú qiú\nTo play football`
 },
 {
 type:3,
 front:"ti zu qiu",
-back:`English:
-To play football
-
-Chinese:
-踢足球
-
-Pinyin:
-tī zú qiú`
+back:`踢足球\ntī zú qiú\nTo play football`
 },
 
 {
 type:1,
 front:"打篮球",
-back:`English:
-To play basketball
-
-Chinese:
-打篮球
-
-Pinyin:
-dǎ lán qiú`
+back:`打篮球\ndǎ lán qiú\nTo play basketball`
 },
 {
 type:2,
 front:"To play basketball",
-back:`English:
-To play basketball
-
-Chinese:
-打篮球
-
-Pinyin:
-dǎ lán qiú`
+back:`打篮球\ndǎ lán qiú\nTo play basketball`
 },
 {
 type:3,
 front:"da lan qiu",
-back:`English:
-To play basketball
-
-Chinese:
-打篮球
-
-Pinyin:
-dǎ lán qiú`
+back:`打篮球\ndǎ lán qiú\nTo play basketball`
 },
 
 {
 type:1,
 front:"打网球",
-back:`English:
-To play tennis
-
-Chinese:
-打网球
-
-Pinyin:
-dǎ wǎng qiú`
+back:`打网球\ndǎ wǎng qiú\nTo play tennis`
 },
 {
 type:2,
 front:"To play tennis",
-back:`English:
-To play tennis
-
-Chinese:
-打网球
-
-Pinyin:
-dǎ wǎng qiú`
+back:`打网球\ndǎ wǎng qiú\nTo play tennis`
 },
 {
 type:3,
 front:"da wang qiu",
-back:`English:
-To play tennis
-
-Chinese:
-打网球
-
-Pinyin:
-dǎ wǎng qiú`
+back:`打网球\ndǎ wǎng qiú\nTo play tennis`
 },
 
 {
 type:1,
 front:"跑步",
-back:`English:
-To run / Running
-
-Chinese:
-跑步
-
-Pinyin:
-pǎo bù`
+back:`跑步\npǎo bù\nTo run / Running`
 },
 {
 type:2,
 front:"To run / Running",
-back:`English:
-To run / Running
-
-Chinese:
-跑步
-
-Pinyin:
-pǎo bù`
+back:`跑步\npǎo bù\nTo run / Running`
 },
 {
 type:3,
 front:"pao bu",
-back:`English:
-To run / Running
-
-Chinese:
-跑步
-
-Pinyin:
-pǎo bù`
+back:`跑步\npǎo bù\nTo run / Running`
 },
 
 {
 type:1,
 front:"爬山",
-back:`English:
-To hike / Climb a mountain
-
-Chinese:
-爬山
-
-Pinyin:
-pá shān`
+back:`爬山\npá shān\nTo hike / Climb a mountain`
 },
 {
 type:2,
 front:"To hike / Climb a mountain",
-back:`English:
-To hike / Climb a mountain
-
-Chinese:
-爬山
-
-Pinyin:
-pá shān`
+back:`爬山\npá shān\nTo hike / Climb a mountain`
 },
 {
 type:3,
 front:"pa shan",
-back:`English:
-To hike / Climb a mountain
-
-Chinese:
-爬山
-
-Pinyin:
-pá shān`
+back:`爬山\npá shān\nTo hike / Climb a mountain`
 },
 
 {
 type:1,
 front:"跳舞",
-back:`English:
-To dance / Dancing
-
-Chinese:
-跳舞
-
-Pinyin:
-tiào wǔ`
+back:`跳舞\ntiào wǔ\nTo dance / Dancing`
 },
 {
 type:2,
 front:"To dance / Dancing",
-back:`English:
-To dance / Dancing
-
-Chinese:
-跳舞
-
-Pinyin:
-tiào wǔ`
+back:`跳舞\ntiào wǔ\nTo dance / Dancing`
 },
 {
 type:3,
 front:"tiao wu",
-back:`English:
-To dance / Dancing
-
-Chinese:
-跳舞
-
-Pinyin:
-tiào wǔ`
+back:`跳舞\ntiào wǔ\nTo dance / Dancing`
 },
 
 {
 type:1,
 front:"唱歌",
-back:`English:
-To sing / Singing
-
-Chinese:
-唱歌
-
-Pinyin:
-chàng gē`
+back:`唱歌\nchàng gē\nTo sing / Singing`
 },
 {
 type:2,
 front:"To sing / Singing",
-back:`English:
-To sing / Singing
-
-Chinese:
-唱歌
-
-Pinyin:
-chàng gē`
+back:`唱歌\nchàng gē\nTo sing / Singing`
 },
 {
 type:3,
 front:"chang ge",
-back:`English:
-To sing / Singing
-
-Chinese:
-唱歌
-
-Pinyin:
-chàng gē`
+back:`唱歌\nchàng gē\nTo sing / Singing`
 },
 
 {
 type:4,
 front:"冬天的时候，我喜欢去____。",
-back:`English:
-In winter, I like to go ____.
+back:`In winter, I like to go ____.
 
-Chinese:
 冬天的时候，我喜欢去____。
-
-Pinyin:
 dōng tiān de shí hou, wǒ xǐ huān qù ____.
 
 Options:
@@ -407,154 +193,134 @@ playing tennis`
 
 {
 type:4,
-front:"他们一边____，一边唱歌。",
-back:`English:
-They ____ while singing.
+front:"他们一边跳舞，一边____。",
+back:`They ____ while dancing.
 
-Chinese:
-他们一边____，一边唱歌。
-
-Pinyin:
-tā men yī biān ____, yī biān chàng gē.
+他们一边跳舞，一边____。
+tā men yī biān tiào wǔ, yī biān ____.
 
 Options:
 
-1. 跳舞
-tiào wǔ
-dancing
-
-2. 游泳
-yóu yǒng
-swimming
-
-3. 跑步
-pǎo bù
-running
-
-4. 滑冰
-huá bīng
-ice skating
-
-5. 爬山
-pá shān
-hiking`
-},
-
-{
-type:4,
-front:"虽然我不会____，但是我想学。",
-back:`English:
-Although I can't ____, I want to learn.
-
-Chinese:
-虽然我不会____，但是我想学。
-
-Pinyin:
-suī rán wǒ bù huì ____, dàn shì wǒ xiǎng xué.
-
-Options:
-
-1. 滑冰
-huá bīng
-ice skate
-
-2. 踢足球
-tī zú qiú
-play football
-
-3. 打篮球
-dǎ lán qiú
-play basketball
-
-4. 唱歌
-chàng gē
-sing
-
-5. 跳舞
-tiào wǔ
-dance`
-},
-
-{
-type:4,
-front:"我习惯每天早上____。",
-back:`English:
-I'm in the habit of ____ every morning.
-
-Chinese:
-我习惯每天早上____。
-
-Pinyin:
-wǒ xí guàn měi tiān zǎo shang ____.
-
-Options:
-
-1. 跑步
-pǎo bù
-running
-
-2. 游泳
-yóu yǒng
-swimming
-
-3. 打篮球
-dǎ lán qiú
-playing basketball
-
-4. 唱歌
+1. 唱歌
 chàng gē
 singing
 
-5. 滑雪
-huá xuě
-skiing`
+2. 聊天
+liáo tiān
+chatting
+
+3. 喝酒
+hē jiǔ
+drinking
+
+4. 笑
+xiào
+laughing
+
+5. 鼓掌
+gǔ zhǎng
+clapping`
 },
 
 {
 type:4,
-front:"周末我打算跟朋友一起去____。",
-back:`English:
-At the weekend I plan to go ____ with friends.
+front:"虽然我不会滑冰，但是我想去____学。",
+back:`Although I can't ice skate, I want to go to ____ to learn.
 
-Chinese:
-周末我打算跟朋友一起去____。
-
-Pinyin:
-zhōu mò wǒ dǎ suàn gēn péng you yī qǐ qù ____.
+虽然我不会滑冰，但是我想去____学。
+suī rán wǒ bù huì huá bīng, dàn shì wǒ xiǎng qù ____ xué.
 
 Options:
 
-1. 爬山
-pá shān
-hiking
+1. 室内滑冰场
+shì nèi huá bīng chǎng
+indoor ice rink
 
-2. 踢足球
-tī zú qiú
-play football
+2. 体育馆
+tǐ yù guǎn
+sports hall
 
-3. 滑冰
-huá bīng
-ice skating
+3. 学校
+xué xiào
+school
 
-4. 打网球
-dǎ wǎng qiú
-play tennis
+4. 俱乐部
+jù lè bù
+club
 
-5. 跳舞
-tiào wǔ
-dancing`
+5. 公园
+gōng yuán
+park`
+},
+
+{
+type:4,
+front:"我习惯每天早上跑步，大约____分钟。",
+back:`I'm in the habit of running every morning, for about ____ minutes.
+
+我习惯每天早上跑步，大约____分钟。
+wǒ xí guàn měi tiān zǎo shang pǎo bù, dà yuē ____ fēn zhōng.
+
+Options:
+
+1. 三十
+sān shí
+thirty
+
+2. 二十
+èr shí
+twenty
+
+3. 四十五
+sì shí wǔ
+forty-five
+
+4. 六十
+liù shí
+sixty
+
+5. 十五
+shí wǔ
+fifteen`
+},
+
+{
+type:4,
+front:"周末我打算跟朋友一起去爬山，我们要去____。",
+back:`At the weekend I plan to go hiking with friends; we're going to ____.
+
+周末我打算跟朋友一起去爬山，我们要去____。
+zhōu mò wǒ dǎ suàn gēn péng you yī qǐ qù pá shān, wǒ men yào qù ____.
+
+Options:
+
+1. 香山
+xiāng shān
+Fragrant Hills
+
+2. 泰山
+tài shān
+Mount Tai
+
+3. 黄山
+huáng shān
+Yellow Mountain
+
+4. 长城
+cháng chéng
+the Great Wall
+
+5. 峨眉山
+é méi shān
+Mount Emei`
 },
 
 {
 type:4,
 front:"因为天气很好，所以我们去海边____。",
-back:`English:
-Because the weather is nice, we're going to the beach to ____.
+back:`Because the weather is nice, we're going to the beach to ____.
 
-Chinese:
 因为天气很好，所以我们去海边____。
-
-Pinyin:
 yīn wèi tiān qì hěn hǎo, suǒ yǐ wǒ men qù hǎi biān ____.
 
 Options:
@@ -563,161 +329,145 @@ Options:
 yóu yǒng
 swim
 
-2. 滑雪
-huá xuě
-ski
+2. 散步
+sàn bù
+walk
 
-3. 打篮球
-dǎ lán qiú
-play basketball
+3. 晒太阳
+shài tài yáng
+sunbathe
 
-4. 滑冰
-huá bīng
-ice skate
+4. 拍照
+pāi zhào
+take photos
 
-5. 唱歌
-chàng gē
-sing`
+5. 野餐
+yě cān
+have a picnic`
 },
 
 {
 type:4,
-front:"弟弟每星期二下午练习____。",
-back:`English:
-My younger brother practises ____ every Tuesday afternoon.
+front:"弟弟每星期二下午练习踢足球，他在____队。",
+back:`My younger brother practises football every Tuesday afternoon; he's on the ____ team.
 
-Chinese:
-弟弟每星期二下午练习____。
-
-Pinyin:
-dì di měi xīng qī èr xià wǔ liàn xí ____.
+弟弟每星期二下午练习踢足球，他在____队。
+dì di měi xīng qī èr xià wǔ liàn xí tī zú qiú, tā zài ____ duì.
 
 Options:
 
-1. 踢足球
-tī zú qiú
-playing football
+1. 学校
+xué xiào
+school
 
-2. 打网球
-dǎ wǎng qiú
-playing tennis
+2. 社区
+shè qū
+community
 
-3. 游泳
-yóu yǒng
-swimming
+3. 青年
+qīng nián
+youth
 
-4. 跑步
-pǎo bù
-running
+4. 业余
+yè yú
+amateur
 
-5. 跳舞
-tiào wǔ
-dancing`
+5. 地区
+dì qū
+local`
 },
 
 {
 type:4,
-front:"她____得很好，将来想当舞蹈老师。",
-back:`English:
-She ____ very well and wants to become a dance teacher in the future.
+front:"她跳舞跳得很好，将来想当____老师。",
+back:`She dances very well and wants to become a ____ teacher in the future.
 
-Chinese:
-她____得很好，将来想当舞蹈老师。
-
-Pinyin:
-tā ____ de hěn hǎo, jiāng lái xiǎng dāng wǔ dǎo lǎo shī.
+她跳舞跳得很好，将来想当____老师。
+tā tiào wǔ tiào de hěn hǎo, jiāng lái xiǎng dāng ____ lǎo shī.
 
 Options:
 
-1. 跳舞
-tiào wǔ
+1. 舞蹈
+wǔ dǎo
 dance
 
-2. 唱歌
-chàng gē
-sing
+2. 音乐
+yīn yuè
+music
 
-3. 游泳
-yóu yǒng
-swim
+3. 体育
+tǐ yù
+sports / PE
 
-4. 跑步
-pǎo bù
-run
+4. 艺术
+yì shù
+art
 
-5. 爬山
-pá shān
-hike`
+5. 表演
+biǎo yǎn
+performance`
 },
 
 {
 type:4,
-front:"圣诞节我打算去练习____。",
-back:`English:
-I plan to go and practise ____ at Christmas.
+front:"圣诞节我打算去____练习滑雪。",
+back:`I plan to go to ____ to practise skiing at Christmas.
 
-Chinese:
-圣诞节我打算去练习____。
-
-Pinyin:
-shèng dàn jié wǒ dǎ suàn qù liàn xí ____.
+圣诞节我打算去____练习滑雪。
+shèng dàn jié wǒ dǎ suàn qù ____ liàn xí huá xuě.
 
 Options:
 
-1. 滑雪
-huá xuě
-skiing
+1. 瑞士
+ruì shì
+Switzerland
 
-2. 滑冰
-huá bīng
-ice skating
+2. 奥地利
+ào dì lì
+Austria
 
-3. 打篮球
-dǎ lán qiú
-basketball
+3. 法国
+fǎ guó
+France
 
-4. 踢足球
-tī zú qiú
-football
+4. 日本
+rì běn
+Japan
 
-5. 游泳
-yóu yǒng
-swimming`
+5. 加拿大
+jiā ná dà
+Canada`
 },
 
 {
 type:4,
-front:"你能教我____吗？我一直想学。",
-back:`English:
-Can you teach me to ____? I've always wanted to learn.
+front:"你能教我打篮球吗？我____想学。",
+back:`Can you teach me basketball? I've ____ wanted to learn.
 
-Chinese:
-你能教我____吗？我一直想学。
-
-Pinyin:
-nǐ néng jiāo wǒ ____ ma? wǒ yī zhí xiǎng xué.
+你能教我打篮球吗？我____想学。
+nǐ néng jiāo wǒ dǎ lán qiú ma? wǒ ____ xiǎng xué.
 
 Options:
 
-1. 打网球
-dǎ wǎng qiú
-play tennis
+1. 一直
+yī zhí
+always
 
-2. 唱歌
-chàng gē
-sing
+2. 很早就
+hěn zǎo jiù
+for a long time
 
-3. 跳舞
-tiào wǔ
-dance
+3. 特别
+tè bié
+especially / really
 
-4. 游泳
-yóu yǒng
-swim
+4. 早就
+zǎo jiù
+long since
 
-5. 爬山
-pá shān
-hike`
+5. 非常
+fēi cháng
+very much`
 }
 
 ]);

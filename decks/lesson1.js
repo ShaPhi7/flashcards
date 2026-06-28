@@ -3,721 +3,471 @@ registerDeck("Lesson 1", [
 {
 type:1,
 front:"努力",
-back:`English:
-Hardworking / Diligently
-
-Chinese:
-努力
-
-Pinyin:
-nǔ lì`
+back:`努力\nnǔ lì\nHardworking / Diligently`
 },
 {
 type:2,
 front:"Hardworking / Diligently",
-back:`English:
-Hardworking / Diligently
-
-Chinese:
-努力
-
-Pinyin:
-nǔ lì`
+back:`努力\nnǔ lì\nHardworking / Diligently`
 },
 {
 type:3,
 front:"nu li",
-back:`English:
-Hardworking / Diligently
-
-Chinese:
-努力
-
-Pinyin:
-nǔ lì`
+back:`努力\nnǔ lì\nHardworking / Diligently`
 },
 
 {
 type:1,
 front:"流利",
-back:`English:
-Fluent
-
-Chinese:
-流利
-
-Pinyin:
-liú lì`
+back:`流利\nliú lì\nFluent`
 },
 {
 type:2,
 front:"Fluent",
-back:`English:
-Fluent
-
-Chinese:
-流利
-
-Pinyin:
-liú lì`
+back:`流利\nliú lì\nFluent`
 },
 {
 type:3,
 front:"liu li",
-back:`English:
-Fluent
-
-Chinese:
-流利
-
-Pinyin:
-liú lì`
+back:`流利\nliú lì\nFluent`
 },
 
 {
 type:1,
 front:"需要",
-back:`English:
-To need
-
-Chinese:
-需要
-
-Pinyin:
-xū yào`
+back:`需要\nxū yào\nTo need`
 },
 {
 type:2,
 front:"To need",
-back:`English:
-To need
-
-Chinese:
-需要
-
-Pinyin:
-xū yào`
+back:`需要\nxū yào\nTo need`
 },
 {
 type:3,
 front:"xu yao",
-back:`English:
-To need
-
-Chinese:
-需要
-
-Pinyin:
-xū yào`
+back:`需要\nxū yào\nTo need`
 },
 
 {
 type:1,
 front:"语言",
-back:`English:
-Language
-
-Chinese:
-语言
-
-Pinyin:
-yǔ yán`
+back:`语言\nyǔ yán\nLanguage`
 },
 {
 type:2,
 front:"Language",
-back:`English:
-Language
-
-Chinese:
-语言
-
-Pinyin:
-yǔ yán`
+back:`语言\nyǔ yán\nLanguage`
 },
 {
 type:3,
 front:"yu yan",
-back:`English:
-Language
-
-Chinese:
-语言
-
-Pinyin:
-yǔ yán`
+back:`语言\nyǔ yán\nLanguage`
 },
 
 {
 type:1,
 front:"锻炼",
-back:`English:
-To exercise / Work out
-
-Chinese:
-锻炼
-
-Pinyin:
-duàn liàn`
+back:`锻炼\nduàn liàn\nTo exercise / Work out`
 },
 {
 type:2,
 front:"To exercise / Work out",
-back:`English:
-To exercise / Work out
-
-Chinese:
-锻炼
-
-Pinyin:
-duàn liàn`
+back:`锻炼\nduàn liàn\nTo exercise / Work out`
 },
 {
 type:3,
 front:"duan lian",
-back:`English:
-To exercise / Work out
-
-Chinese:
-锻炼
-
-Pinyin:
-duàn liàn`
+back:`锻炼\nduàn liàn\nTo exercise / Work out`
 },
 
 {
 type:1,
 front:"运动员",
-back:`English:
-Athlete / Sports player
-
-Chinese:
-运动员
-
-Pinyin:
-yùn dòng yuán`
+back:`运动员\nyùn dòng yuán\nAthlete / Sports player`
 },
 {
 type:2,
 front:"Athlete / Sports player",
-back:`English:
-Athlete / Sports player
-
-Chinese:
-运动员
-
-Pinyin:
-yùn dòng yuán`
+back:`运动员\nyùn dòng yuán\nAthlete / Sports player`
 },
 {
 type:3,
 front:"yun dong yuan",
-back:`English:
-Athlete / Sports player
-
-Chinese:
-运动员
-
-Pinyin:
-yùn dòng yuán`
+back:`运动员\nyùn dòng yuán\nAthlete / Sports player`
 },
 
 {
 type:1,
 front:"已经",
-back:`English:
-Already
-
-Chinese:
-已经
-
-Pinyin:
-yǐ jīng`
+back:`已经\nyǐ jīng\nAlready`
 },
 {
 type:2,
 front:"Already",
-back:`English:
-Already
-
-Chinese:
-已经
-
-Pinyin:
-yǐ jīng`
+back:`已经\nyǐ jīng\nAlready`
 },
 {
 type:3,
 front:"yi jing",
-back:`English:
-Already
-
-Chinese:
-已经
-
-Pinyin:
-yǐ jīng`
+back:`已经\nyǐ jīng\nAlready`
 },
 
 {
 type:1,
 front:"常常",
-back:`English:
-Often / Frequently
-
-Chinese:
-常常
-
-Pinyin:
-cháng cháng`
+back:`常常\ncháng cháng\nOften / Frequently`
 },
 {
 type:2,
 front:"Often / Frequently",
-back:`English:
-Often / Frequently
-
-Chinese:
-常常
-
-Pinyin:
-cháng cháng`
+back:`常常\ncháng cháng\nOften / Frequently`
 },
 {
 type:3,
 front:"chang chang",
-back:`English:
-Often / Frequently
-
-Chinese:
-常常
-
-Pinyin:
-cháng cháng`
+back:`常常\ncháng cháng\nOften / Frequently`
 },
 
 {
 type:1,
 front:"小时候",
-back:`English:
-When (I was) young / As a child
-
-Chinese:
-小时候
-
-Pinyin:
-xiǎo shí hou`
+back:`小时候\nxiǎo shí hou\nWhen (I was) young / As a child`
 },
 {
 type:2,
 front:"When (I was) young / As a child",
-back:`English:
-When (I was) young / As a child
-
-Chinese:
-小时候
-
-Pinyin:
-xiǎo shí hou`
+back:`小时候\nxiǎo shí hou\nWhen (I was) young / As a child`
 },
 {
 type:3,
 front:"xiao shi hou",
-back:`English:
-When (I was) young / As a child
-
-Chinese:
-小时候
-
-Pinyin:
-xiǎo shí hou`
+back:`小时候\nxiǎo shí hou\nWhen (I was) young / As a child`
 },
 
 {
 type:1,
 front:"练习",
-back:`English:
-To practise
-
-Chinese:
-练习
-
-Pinyin:
-liàn xí`
+back:`练习\nliàn xí\nTo practise`
 },
 {
 type:2,
 front:"To practise",
-back:`English:
-To practise
-
-Chinese:
-练习
-
-Pinyin:
-liàn xí`
+back:`练习\nliàn xí\nTo practise`
 },
 {
 type:3,
 front:"lian xi",
-back:`English:
-To practise
-
-Chinese:
-练习
-
-Pinyin:
-liàn xí`
+back:`练习\nliàn xí\nTo practise`
 },
 
 {
 type:4,
-front:"虽然他学习不太____，但是他考试考得很好。",
-back:`English:
-Although he doesn't study very ____, he does very well in exams.
+front:"虽然他学习不太努力，但是他考试考得很____。",
+back:`Although he doesn't study very hard, he does very ____ in exams.
 
-Chinese:
-虽然他学习不太____，但是他考试考得很好。
-
-Pinyin:
-suī rán tā xué xí bù tài ____, dàn shì tā kǎo shì kǎo de hěn hǎo.
+虽然他学习不太努力，但是他考试考得很____。
+suī rán tā xué xí bù tài nǔ lì, dàn shì tā kǎo shì kǎo de hěn ____.
 
 Options:
 
-1. 努力
-nǔ lì
-hardworking / diligently
-
-2. 流利
-liú lì
-fluent
-
-3. 快
-kuài
-fast
-
-4. 慢
-màn
-slow
-
-5. 好
+1. 好
 hǎo
-good`
+well
+
+2. 快
+kuài
+quickly
+
+3. 棒
+bàng
+great
+
+4. 顺利
+shùn lì
+smoothly
+
+5. 认真
+rèn zhēn
+carefully`
 },
 
 {
 type:4,
-front:"因为她常常练习，所以汉语说得很____。",
-back:`English:
-Because she often practises, she speaks Chinese very ____.
+front:"因为她常常练习，所以汉语说得很流利，而且____也很好。",
+back:`Because she often practises, her Chinese is very fluent and her ____ is also very good.
 
-Chinese:
-因为她常常练习，所以汉语说得很____。
-
-Pinyin:
-yīn wèi tā cháng cháng liàn xí, suǒ yǐ hàn yǔ shuō de hěn ____.
+因为她常常练习，所以汉语说得很流利，而且____也很好。
+yīn wèi tā cháng cháng liàn xí, suǒ yǐ hàn yǔ shuō de hěn liú lì, ér qiě ____ yě hěn hǎo.
 
 Options:
 
-1. 流利
-liú lì
-fluent
+1. 听力
+tīng lì
+listening
 
-2. 努力
-nǔ lì
-diligently
+2. 口语
+kǒu yǔ
+speaking
 
-3. 难
-nán
-difficult
+3. 写作
+xiě zuò
+writing
 
-4. 好听
-hǎo tīng
-pleasant-sounding
+4. 阅读
+yuè dú
+reading
 
-5. 慢
-màn
-slow`
+5. 发音
+fā yīn
+pronunciation`
 },
 
 {
 type:4,
-front:"我____买一本新的语言书。",
-back:`English:
-I ____ buy a new language book.
+front:"我需要买一本新的语言____。",
+back:`I need to buy a new language ____.
 
-Chinese:
-我____买一本新的语言书。
-
-Pinyin:
-wǒ ____ mǎi yī běn xīn de yǔ yán shū.
+我需要买一本新的语言____。
+wǒ xū yào mǎi yī běn xīn de yǔ yán ____.
 
 Options:
 
-1. 需要
-xū yào
-need to
+1. 书
+shū
+book
 
-2. 常常
-cháng cháng
-often
+2. 词典
+cí diǎn
+dictionary
 
-3. 已经
-yǐ jīng
-already
+3. 教材
+jiào cái
+textbook
 
-4. 不想
-bù xiǎng
-don't want to
+4. 练习册
+liàn xí cè
+workbook
 
-5. 打算
-dǎ suàn
-plan to`
+5. 笔记本
+bǐ jì běn
+notebook`
 },
 
 {
 type:4,
-front:"你会说几种____？",
-back:`English:
-How many ____ can you speak?
+front:"你会说几种语言？我会说____种。",
+back:`How many languages can you speak? I can speak ____.
 
-Chinese:
-你会说几种____？
-
-Pinyin:
-nǐ huì shuō jǐ zhǒng ____?
+你会说几种语言？我会说____种。
+nǐ huì shuō jǐ zhǒng yǔ yán? wǒ huì shuō ____ zhǒng.
 
 Options:
 
-1. 语言
-yǔ yán
-languages
+1. 两
+liǎng
+two
 
-2. 歌
-gē
-songs
+2. 三
+sān
+three
 
-3. 故事
-gù shi
-stories
+3. 一
+yī
+one
 
-4. 笑话
-xiào hua
-jokes
+4. 四
+sì
+four
 
-5. 菜
-cài
-dishes`
+5. 五
+wǔ
+five`
 },
 
 {
 type:4,
-front:"医生说我每天都应该____身体。",
-back:`English:
-The doctor said I should ____ every day.
+front:"医生说我每天都应该锻炼，至少____分钟。",
+back:`The doctor said I should exercise every day, for at least ____ minutes.
 
-Chinese:
-医生说我每天都应该____身体。
-
-Pinyin:
-yī shēng shuō wǒ měi tiān dōu yīng gāi ____ shēn tǐ.
+医生说我每天都应该锻炼，至少____分钟。
+yī shēng shuō wǒ měi tiān dōu yīng gāi duàn liàn, zhì shǎo ____ fēn zhōng.
 
 Options:
 
-1. 锻炼
-duàn liàn
-exercise
+1. 三十
+sān shí
+thirty
 
-2. 洗
-xǐ
-wash
+2. 二十
+èr shí
+twenty
+
+3. 四十五
+sì shí wǔ
+forty-five
+
+4. 六十
+liù shí
+sixty
+
+5. 十五
+shí wǔ
+fifteen`
+},
+
+{
+type:4,
+front:"Messi是一个非常有名的足球运动员，他来自____。",
+back:`Messi is a very famous football player; he is from ____.
+
+Messi是一个非常有名的足球运动员，他来自____。
+Messi shì yī gè fēi cháng yǒu míng de zú qiú yùn dòng yuán, tā lái zì ____.
+
+Options:
+
+1. 阿根廷
+ā gēn tíng
+Argentina
+
+2. 巴西
+bā xī
+Brazil
+
+3. 西班牙
+xī bān yá
+Spain
+
+4. 法国
+fǎ guó
+France
+
+5. 葡萄牙
+pú táo yá
+Portugal`
+},
+
+{
+type:4,
+front:"现在已经十二点了，你应该去____了。",
+back:`It is already twelve o'clock; you should go to ____ now.
+
+现在已经十二点了，你应该去____了。
+xiàn zài yǐ jīng shí èr diǎn le, nǐ yīng gāi qù ____ le.
+
+Options:
+
+1. 睡觉
+shuì jiào
+sleep
+
+2. 吃饭
+chī fàn
+eat
 
 3. 休息
 xiū xi
 rest
 
-4. 检查
-jiǎn chá
-check
+4. 工作
+gōng zuò
+work
 
-5. 保护
-bǎo hù
-protect`
+5. 学习
+xué xí
+study`
 },
 
 {
 type:4,
-front:"Messi是一个非常有名的足球____。",
-back:`English:
-Messi is a very famous football ____.
+front:"周末她常常在家____汉语，从不出去玩。",
+back:`At weekends she often ____ Chinese at home and never goes out.
 
-Chinese:
-Messi是一个非常有名的足球____。
-
-Pinyin:
-Messi shì yī gè fēi cháng yǒu míng de zú qiú ____.
+周末她常常在家____汉语，从不出去玩。
+zhōu mò tā cháng cháng zài jiā ____ hàn yǔ, cóng bù chū qù wán.
 
 Options:
 
-1. 运动员
-yùn dòng yuán
-athlete / player
-
-2. 老师
-lǎo shī
-teacher
-
-3. 医生
-yī shēng
-doctor
-
-4. 明星
-míng xīng
-star / celebrity
-
-5. 教练
-jiào liàn
-coach`
-},
-
-{
-type:4,
-front:"现在____十二点了，你应该去睡觉了。",
-back:`English:
-It is ____ twelve o'clock, you should go to sleep.
-
-Chinese:
-现在____十二点了，你应该去睡觉了。
-
-Pinyin:
-xiàn zài ____ shí èr diǎn le, nǐ yīng gāi qù shuì jiào le.
-
-Options:
-
-1. 已经
-yǐ jīng
-already
-
-2. 常常
-cháng cháng
-often
-
-3. 只有
-zhǐ yǒu
-only
-
-4. 差不多
-chà bu duō
-almost
-
-5. 刚刚
-gāng gāng
-just now`
-},
-
-{
-type:4,
-front:"周末她____在家学习汉语。",
-back:`English:
-At weekends she ____ studies Chinese at home.
-
-Chinese:
-周末她____在家学习汉语。
-
-Pinyin:
-zhōu mò tā ____ zài jiā xué xí hàn yǔ.
-
-Options:
-
-1. 常常
-cháng cháng
-often
-
-2. 已经
-yǐ jīng
-already
-
-3. 需要
-xū yào
-needs to
-
-4. 不想
-bù xiǎng
-doesn't want to
-
-5. 偶尔
-ǒu ěr
-occasionally`
-},
-
-{
-type:4,
-front:"____，你最喜欢做什么运动？",
-back:`English:
-____, what sport did you like most?
-
-Chinese:
-____，你最喜欢做什么运动？
-
-Pinyin:
-____, nǐ zuì xǐ huān zuò shén me yùn dòng?
-
-Options:
-
-1. 小时候
-xiǎo shí hou
-when you were young
-
-2. 现在
-xiàn zài
-now
-
-3. 昨天
-zuó tiān
-yesterday
-
-4. 以前
-yǐ qián
-before / in the past
-
-5. 今年
-jīn nián
-this year`
-},
-
-{
-type:4,
-front:"我跟中国朋友一起____汉语。",
-back:`English:
-I ____ Chinese together with my Chinese friends.
-
-Chinese:
-我跟中国朋友一起____汉语。
-
-Pinyin:
-wǒ gēn zhōng guó péng you yī qǐ ____ hàn yǔ.
-
-Options:
-
-1. 练习
-liàn xí
-practise
-
-2. 学习
+1. 学习
 xué xí
 study
 
-3. 教
-jiāo
-teach
+2. 练习
+liàn xí
+practise
 
-4. 翻译
+3. 复习
+fù xí
+revise
+
+4. 听
+tīng
+listen to
+
+5. 翻译
 fān yì
-translate
+translate`
+},
 
-5. 考试
-kǎo shì
-sit an exam`
+{
+type:4,
+front:"小时候，你最喜欢____什么？",
+back:`When you were young, what did you like ____ most?
+
+小时候，你最喜欢____什么？
+xiǎo shí hou, nǐ zuì xǐ huān ____ shén me?
+
+Options:
+
+1. 玩
+wán
+play
+
+2. 吃
+chī
+eat
+
+3. 看
+kàn
+watch
+
+4. 学
+xué
+learn
+
+5. 做
+zuò
+do`
+},
+
+{
+type:4,
+front:"我跟中国朋友一起练习汉语，所以进步很____。",
+back:`I practise Chinese with Chinese friends, so my progress is very ____.
+
+我跟中国朋友一起练习汉语，所以进步很____。
+wǒ gēn zhōng guó péng you yī qǐ liàn xí hàn yǔ, suǒ yǐ jìn bù hěn ____.
+
+Options:
+
+1. 快
+kuài
+fast
+
+2. 大
+dà
+great
+
+3. 明显
+míng xiǎn
+noticeable
+
+4. 好
+hǎo
+good
+
+5. 顺利
+shùn lì
+smooth`
 }
 
 ]);

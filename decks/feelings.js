@@ -3,721 +3,471 @@ registerDeck("Feelings & States", [
 {
 type:1,
 front:"累",
-back:`English:
-Tired
-
-Chinese:
-累
-
-Pinyin:
-lèi`
+back:`累\nlèi\nTired`
 },
 {
 type:2,
 front:"Tired",
-back:`English:
-Tired
-
-Chinese:
-累
-
-Pinyin:
-lèi`
+back:`累\nlèi\nTired`
 },
 {
 type:3,
 front:"lei",
-back:`English:
-Tired
-
-Chinese:
-累
-
-Pinyin:
-lèi`
+back:`累\nlèi\nTired`
 },
 
 {
 type:1,
 front:"饿",
-back:`English:
-Hungry
-
-Chinese:
-饿
-
-Pinyin:
-è`
+back:`饿\nè\nHungry`
 },
 {
 type:2,
 front:"Hungry",
-back:`English:
-Hungry
-
-Chinese:
-饿
-
-Pinyin:
-è`
+back:`饿\nè\nHungry`
 },
 {
 type:3,
 front:"e",
-back:`English:
-Hungry
-
-Chinese:
-饿
-
-Pinyin:
-è`
+back:`饿\nè\nHungry`
 },
 
 {
 type:1,
 front:"渴",
-back:`English:
-Thirsty
-
-Chinese:
-渴
-
-Pinyin:
-kě`
+back:`渴\nkě\nThirsty`
 },
 {
 type:2,
 front:"Thirsty",
-back:`English:
-Thirsty
-
-Chinese:
-渴
-
-Pinyin:
-kě`
+back:`渴\nkě\nThirsty`
 },
 {
 type:3,
 front:"ke",
-back:`English:
-Thirsty
-
-Chinese:
-渴
-
-Pinyin:
-kě`
+back:`渴\nkě\nThirsty`
 },
 
 {
 type:1,
 front:"饱",
-back:`English:
-Full (after eating)
-
-Chinese:
-饱
-
-Pinyin:
-bǎo`
+back:`饱\nbǎo\nFull (after eating)`
 },
 {
 type:2,
 front:"Full (after eating)",
-back:`English:
-Full (after eating)
-
-Chinese:
-饱
-
-Pinyin:
-bǎo`
+back:`饱\nbǎo\nFull (after eating)`
 },
 {
 type:3,
 front:"bao",
-back:`English:
-Full (after eating)
-
-Chinese:
-饱
-
-Pinyin:
-bǎo`
+back:`饱\nbǎo\nFull (after eating)`
 },
 
 {
 type:1,
 front:"伤心",
-back:`English:
-Sad / Heartbroken
-
-Chinese:
-伤心
-
-Pinyin:
-shāng xīn`
+back:`伤心\nshāng xīn\nSad / Heartbroken`
 },
 {
 type:2,
 front:"Sad / Heartbroken",
-back:`English:
-Sad / Heartbroken
-
-Chinese:
-伤心
-
-Pinyin:
-shāng xīn`
+back:`伤心\nshāng xīn\nSad / Heartbroken`
 },
 {
 type:3,
 front:"shang xin",
-back:`English:
-Sad / Heartbroken
-
-Chinese:
-伤心
-
-Pinyin:
-shāng xīn`
+back:`伤心\nshāng xīn\nSad / Heartbroken`
 },
 
 {
 type:1,
 front:"高兴",
-back:`English:
-Happy / Pleased
-
-Chinese:
-高兴
-
-Pinyin:
-gāo xìng`
+back:`高兴\ngāo xìng\nHappy / Pleased`
 },
 {
 type:2,
 front:"Happy / Pleased",
-back:`English:
-Happy / Pleased
-
-Chinese:
-高兴
-
-Pinyin:
-gāo xìng`
+back:`高兴\ngāo xìng\nHappy / Pleased`
 },
 {
 type:3,
 front:"gao xing",
-back:`English:
-Happy / Pleased
-
-Chinese:
-高兴
-
-Pinyin:
-gāo xìng`
+back:`高兴\ngāo xìng\nHappy / Pleased`
 },
 
 {
 type:1,
 front:"健康",
-back:`English:
-Healthy / Health
-
-Chinese:
-健康
-
-Pinyin:
-jiàn kāng`
+back:`健康\njiàn kāng\nHealthy / Health`
 },
 {
 type:2,
 front:"Healthy / Health",
-back:`English:
-Healthy / Health
-
-Chinese:
-健康
-
-Pinyin:
-jiàn kāng`
+back:`健康\njiàn kāng\nHealthy / Health`
 },
 {
 type:3,
 front:"jian kang",
-back:`English:
-Healthy / Health
-
-Chinese:
-健康
-
-Pinyin:
-jiàn kāng`
+back:`健康\njiàn kāng\nHealthy / Health`
 },
 
 {
 type:1,
 front:"着急",
-back:`English:
-Anxious / Worried / In a rush
-
-Chinese:
-着急
-
-Pinyin:
-zháo jí`
+back:`着急\nzháo jí\nAnxious / Worried / In a rush`
 },
 {
 type:2,
 front:"Anxious / Worried / In a rush",
-back:`English:
-Anxious / Worried / In a rush
-
-Chinese:
-着急
-
-Pinyin:
-zháo jí`
+back:`着急\nzháo jí\nAnxious / Worried / In a rush`
 },
 {
 type:3,
 front:"zhao ji",
-back:`English:
-Anxious / Worried / In a rush
-
-Chinese:
-着急
-
-Pinyin:
-zháo jí`
+back:`着急\nzháo jí\nAnxious / Worried / In a rush`
 },
 
 {
 type:1,
 front:"安静",
-back:`English:
-Quiet / Calm
-
-Chinese:
-安静
-
-Pinyin:
-ān jìng`
+back:`安静\nān jìng\nQuiet / Calm`
 },
 {
 type:2,
 front:"Quiet / Calm",
-back:`English:
-Quiet / Calm
-
-Chinese:
-安静
-
-Pinyin:
-ān jìng`
+back:`安静\nān jìng\nQuiet / Calm`
 },
 {
 type:3,
 front:"an jing",
-back:`English:
-Quiet / Calm
-
-Chinese:
-安静
-
-Pinyin:
-ān jìng`
+back:`安静\nān jìng\nQuiet / Calm`
 },
 
 {
 type:1,
 front:"舒服",
-back:`English:
-Comfortable / At ease
-
-Chinese:
-舒服
-
-Pinyin:
-shū fu`
+back:`舒服\nshū fu\nComfortable / At ease`
 },
 {
 type:2,
 front:"Comfortable / At ease",
-back:`English:
-Comfortable / At ease
-
-Chinese:
-舒服
-
-Pinyin:
-shū fu`
+back:`舒服\nshū fu\nComfortable / At ease`
 },
 {
 type:3,
 front:"shu fu",
-back:`English:
-Comfortable / At ease
-
-Chinese:
-舒服
-
-Pinyin:
-shū fu`
+back:`舒服\nshū fu\nComfortable / At ease`
 },
 
 {
 type:4,
-front:"因为我太____了，所以我需要喝一杯咖啡。",
-back:`English:
-Because I'm too ____, I need to drink a cup of coffee.
+front:"因为我太累了，所以我需要喝一杯____。",
+back:`Because I'm too tired, I need to drink a cup of ____.
 
-Chinese:
-因为我太____了，所以我需要喝一杯咖啡。
-
-Pinyin:
-yīn wèi wǒ tài ____ le, suǒ yǐ wǒ xū yào hē yī bēi kā fēi.
+因为我太累了，所以我需要喝一杯____。
+yīn wèi wǒ tài lèi le, suǒ yǐ wǒ xū yào hē yī bēi ____.
 
 Options:
 
-1. 累
-lèi
-tired
+1. 咖啡
+kā fēi
+coffee
 
-2. 饿
-è
-hungry
+2. 茶
+chá
+tea
 
-3. 渴
-kě
-thirsty
+3. 水
+shuǐ
+water
 
-4. 高兴
-gāo xìng
-happy
+4. 果汁
+guǒ zhī
+juice
 
-5. 安静
-ān jìng
-quiet`
+5. 牛奶
+niú nǎi
+milk`
 },
 
 {
 type:4,
-front:"我已经____了，不想再吃了。",
-back:`English:
-I'm already ____, I don't want to eat any more.
+front:"我已经饱了，不想再吃____了。",
+back:`I'm already full, I don't want to eat any more ____.
 
-Chinese:
-我已经____了，不想再吃了。
-
-Pinyin:
-wǒ yǐ jīng ____ le, bù xiǎng zài chī le.
+我已经饱了，不想再吃____了。
+wǒ yǐ jīng bǎo le, bù xiǎng zài chī ____ le.
 
 Options:
 
-1. 饱
-bǎo
-full
+1. 米饭
+mǐ fàn
+rice
 
-2. 饿
-è
-hungry
+2. 面条
+miàn tiáo
+noodles
 
-3. 渴
-kě
-thirsty
+3. 饺子
+jiǎo zi
+dumplings
 
-4. 累
-lèi
-tired
+4. 蛋糕
+dàn gāo
+cake
 
-5. 伤心
-shāng xīn
-sad`
+5. 水果
+shuǐ guǒ
+fruit`
 },
 
 {
 type:4,
-front:"慢慢来，别____！",
-back:`English:
-Take your time, don't be ____!
+front:"慢慢来，别着急！我们还有____时间。",
+back:`Take your time, don't rush! We still have ____ time.
 
-Chinese:
-慢慢来，别____！
-
-Pinyin:
-màn màn lái, bié ____!
+慢慢来，别着急！我们还有____时间。
+màn màn lái, bié zháo jí! wǒ men hái yǒu ____ shí jiān.
 
 Options:
 
-1. 着急
-zháo jí
-anxious / in a rush
+1. 很多
+hěn duō
+a lot of
 
-2. 高兴
-gāo xìng
-happy
+2. 一点儿
+yī diǎn r
+a little
 
-3. 安静
-ān jìng
-quiet
+3. 足够
+zú gòu
+enough
 
-4. 健康
-jiàn kāng
-healthy
+4. 三十分钟
+sān shí fēn zhōng
+thirty minutes
 
-5. 饱
-bǎo
-full`
+5. 两个小时
+liǎng ge xiǎo shí
+two hours`
 },
 
 {
 type:4,
-front:"认识你很____！",
-back:`English:
-I'm very ____ to meet you!
+front:"认识你我很高兴！你是____吗？",
+back:`I'm very happy to meet you! Are you a ____?
 
-Chinese:
-认识你很____！
-
-Pinyin:
-rèn shi nǐ hěn ____!
+认识你我很高兴！你是____吗？
+rèn shi nǐ wǒ hěn gāo xìng! nǐ shì ____ ma?
 
 Options:
 
-1. 高兴
-gāo xìng
-happy / pleased
+1. 留学生
+liú xué shēng
+international student
 
-2. 伤心
-shāng xīn
-sad
+2. 老师
+lǎo shī
+teacher
 
-3. 累
-lèi
-tired
+3. 新来的
+xīn lái de
+new here
 
-4. 着急
-zháo jí
-anxious
+4. 中国人
+zhōng guó rén
+Chinese
 
-5. 渴
-kě
-thirsty`
+5. 朋友的朋友
+péng you de péng you
+a friend of a friend`
 },
 
 {
 type:4,
-front:"因为奶茶不____，所以我不常喝。",
-back:`English:
-Because milk tea isn't ____, I don't drink it often.
+front:"因为奶茶不健康，所以我改喝____。",
+back:`Because milk tea isn't healthy, I switched to drinking ____.
 
-Chinese:
-因为奶茶不____，所以我不常喝。
-
-Pinyin:
-yīn wèi nǎi chá bù ____, suǒ yǐ wǒ bù cháng hē.
+因为奶茶不健康，所以我改喝____。
+yīn wèi nǎi chá bù jiàn kāng, suǒ yǐ wǒ gǎi hē ____.
 
 Options:
 
-1. 健康
-jiàn kāng
-healthy
+1. 绿茶
+lǜ chá
+green tea
 
-2. 好喝
-hǎo hē
-tasty (to drink)
+2. 白开水
+bái kāi shuǐ
+plain boiled water
 
-3. 便宜
-pián yi
-cheap
+3. 果汁
+guǒ zhī
+juice
 
-4. 舒服
-shū fu
-comfortable
+4. 豆浆
+dòu jiāng
+soy milk
 
-5. 安静
-ān jìng
-quiet`
+5. 柠檬水
+níng méng shuǐ
+lemonade`
 },
 
 {
 type:4,
-front:"我喜欢听____的音乐，因为它让我很____。",
-back:`English:
-I like listening to ____ music because it makes me feel very ____.
+front:"我喜欢在安静的____里学习。",
+back:`I like studying in a quiet ____.
 
-Chinese:
-我喜欢听____的音乐，因为它让我很____。
-
-Pinyin:
-wǒ xǐ huān tīng ____ de yīn yuè, yīn wèi tā ràng wǒ hěn ____.
+我喜欢在安静的____里学习。
+wǒ xǐ huān zài ān jìng de ____ lǐ xué xí.
 
 Options:
 
-1. 安静 / 舒服
-ān jìng / shū fu
-calm / comfortable
+1. 图书馆
+tú shū guǎn
+library
 
-2. 伤心 / 累
-shāng xīn / lèi
-sad / tired
+2. 咖啡馆
+kā fēi guǎn
+café
 
-3. 高兴 / 着急
-gāo xìng / zháo jí
-happy / anxious
+3. 房间
+fáng jiān
+room
 
-4. 健康 / 饿
-jiàn kāng / è
-healthy / hungry
+4. 办公室
+bàn gōng shì
+office
 
-5. 安静 / 着急
-ān jìng / zháo jí
-calm / anxious`
+5. 书店
+shū diàn
+bookshop`
 },
 
 {
 type:4,
-front:"虽然我很____，但是我还要继续工作。",
-back:`English:
-Although I'm very ____, I still have to keep working.
+front:"虽然我很累，但是我还要继续____。",
+back:`Although I'm very tired, I still have to keep ____.
 
-Chinese:
-虽然我很____，但是我还要继续工作。
-
-Pinyin:
-suī rán wǒ hěn ____, dàn shì wǒ hái yào jì xù gōng zuò.
+虽然我很累，但是我还要继续____。
+suī rán wǒ hěn lèi, dàn shì wǒ hái yào jì xù ____.
 
 Options:
 
-1. 累
-lèi
-tired
+1. 工作
+gōng zuò
+working
 
-2. 高兴
-gāo xìng
-happy
+2. 学习
+xué xí
+studying
 
-3. 饱
-bǎo
-full
+3. 练习
+liàn xí
+practising
 
-4. 健康
-jiàn kāng
-healthy
+4. 跑步
+pǎo bù
+running
 
-5. 安静
-ān jìng
-quiet`
+5. 写作业
+xiě zuò yè
+doing homework`
 },
 
 {
 type:4,
-front:"他考试没考好，所以他很____。",
-back:`English:
-He didn't do well in his exam, so he's very ____.
+front:"他考试没考好，所以他很伤心，一个人____。",
+back:`He didn't do well in his exam, so he's very sad and ____ alone.
 
-Chinese:
-他考试没考好，所以他很____。
-
-Pinyin:
-tā kǎo shì méi kǎo hǎo, suǒ yǐ tā hěn ____.
+他考试没考好，所以他很伤心，一个人____。
+tā kǎo shì méi kǎo hǎo, suǒ yǐ tā hěn shāng xīn, yī gè rén ____.
 
 Options:
 
-1. 伤心
-shāng xīn
-sad
+1. 待在家里
+dāi zài jiā lǐ
+stayed at home
 
-2. 高兴
-gāo xìng
-happy
+2. 哭了
+kū le
+cried
 
-3. 舒服
-shū fu
-comfortable
+3. 走路
+zǒu lù
+walked
 
-4. 健康
-jiàn kāng
-healthy
+4. 看书
+kàn shū
+read
 
-5. 饱
-bǎo
-full`
+5. 睡觉
+shuì jiào
+slept`
 },
 
 {
 type:4,
-front:"我非常____，需要马上喝水。",
-back:`English:
-I'm extremely ____, I need to drink water right away.
+front:"我非常渴，可以给我____吗？",
+back:`I'm extremely thirsty, can you give me ____?
 
-Chinese:
-我非常____，需要马上喝水。
-
-Pinyin:
-wǒ fēi cháng ____, xū yào mǎ shàng hē shuǐ.
+我非常渴，可以给我____吗？
+wǒ fēi cháng kě, kě yǐ gěi wǒ ____ ma?
 
 Options:
 
-1. 渴
-kě
-thirsty
+1. 一杯水
+yī bēi shuǐ
+a glass of water
 
-2. 饿
-è
-hungry
+2. 一瓶茶
+yī píng chá
+a bottle of tea
 
-3. 累
-lèi
-tired
+3. 一罐果汁
+yī guàn guǒ zhī
+a can of juice
 
-4. 伤心
-shāng xīn
-sad
+4. 一杯牛奶
+yī bēi niú nǎi
+a glass of milk
 
-5. 着急
-zháo jí
-anxious`
+5. 一杯咖啡
+yī bēi kā fēi
+a cup of coffee`
 },
 
 {
 type:4,
-front:"这个沙发很____，我想在上面睡觉。",
-back:`English:
-This sofa is very ____; I want to sleep on it.
+front:"这个沙发很舒服，我想在上面____。",
+back:`This sofa is very comfortable; I want to ____ on it.
 
-Chinese:
-这个沙发很____，我想在上面睡觉。
-
-Pinyin:
-zhè ge shā fā hěn ____, wǒ xiǎng zài shàng miàn shuì jiào.
+这个沙发很舒服，我想在上面____。
+zhè ge shā fā hěn shū fu, wǒ xiǎng zài shàng miàn ____.
 
 Options:
 
-1. 舒服
-shū fu
-comfortable
+1. 睡觉
+shuì jiào
+sleep
 
-2. 着急
-zháo jí
-anxious
+2. 看电视
+kàn diàn shì
+watch TV
 
-3. 伤心
-shāng xīn
-sad
+3. 休息
+xiū xi
+rest
 
-4. 健康
-jiàn kāng
-healthy
+4. 看书
+kàn shū
+read
 
-5. 安静
-ān jìng
-quiet`
+5. 聊天
+liáo tiān
+chat`
 }
 
 ]);
