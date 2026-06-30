@@ -1,4 +1,4 @@
-registerDeck("Exams, Career & Life", [
+registerDeck("Lesson 3", [
 
 {
 type:1,

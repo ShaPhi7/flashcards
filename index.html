@@ -93,7 +93,18 @@
       text-align: center;
       cursor: pointer;
       transition: transform 0.12s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-      overflow: hidden;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: var(--divider) transparent;
+    }
+    /* Long content scrolls top-down rather than being vertically centered
+       (and clipped) like short content is. */
+    #card.back {
+      align-items: flex-start;
+    }
+    #card.back .card-main {
+      padding-top: 0.5rem;
     }
     /* ── FRONT: cool blue ── */
     #card.front {
@@ -200,12 +211,13 @@ function registerDeck(name, cards) {
 <script src="decks/ability.js"></script>
 <script src="decks/time_duration.js"></script>
 <script src="decks/daily_life.js"></script>
-<script src="decks/workbook_vocab.js"></script>
+<script src="decks/lesson2.js"></script>
 <script src="decks/travel_city_life.js"></script>
 <script src="decks/daily_routine_transportation.js"></script>
-<script src="decks/exams_career_life.js"></script>
+<script src="decks/lesson3.js"></script>
 <script src="decks/work_city_life.js"></script>
 <script src="decks/sports_comparisons.js"></script>
+<script src="decks/exercise_fitness.js"></script>
 
 <script>
     let currentDeck = [];
